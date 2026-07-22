@@ -1,0 +1,21 @@
+# Environnement virtuel
+venv/
+l3env/
+env/
+
+# Fichiers Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+media/
+
+# VS Code
+.vscode/
+
+# Variables d'environnement
+.env
