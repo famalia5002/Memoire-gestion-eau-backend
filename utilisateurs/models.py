@@ -1,6 +1,9 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
+def chemin_photo(instance, filename):
+    return f'photos/utilisateurs/{instance.username}/{filename}'
+
 class Utilisateur(AbstractUser):
     ROLES = [
         ('super_admin', 'Super Administrateur'),
@@ -18,8 +21,6 @@ class Utilisateur(AbstractUser):
         blank=True,
         null=True
     )
-
-    # Champs supplémentaires pour les clients
     telephone = models.CharField(
         max_length=20,
         blank=True,
@@ -37,11 +38,16 @@ class Utilisateur(AbstractUser):
         blank=True,
         null=True
     )
+    
+    photo = models.ImageField(
+        upload_to=chemin_photo,
+        blank=True,
+        null=True
+    )
 
     def __str__(self):
         return f"{self.username} ({self.role})"
 
-    
     @property
     def est_super_admin(self):
         return self.role == 'super_admin'

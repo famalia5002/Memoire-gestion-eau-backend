@@ -11,8 +11,10 @@ from .models import Utilisateur
 from .serializers import (
     UtilisateurSerializer,
     CreerUtilisateurSerializer,
+      ModifierUtilisateurSerializer,
     ModifierMotDePasseSerializer
 )
+from rest_framework.parsers import MultiPartParser, FormParser
 
 class ConnexionView(APIView):
     permission_classes = [AllowAny]
@@ -127,3 +129,47 @@ class ProfilView(generics.RetrieveUpdateAPIView):
 
     def get_object(self):
         return self.request.user
+
+
+class ModifierProfilView(APIView):
+    permission_classes = [IsAuthenticated]
+    parser_classes = [MultiPartParser, FormParser]
+
+    def put(self, request):
+        serializer = ModifierUtilisateurSerializer(
+            request.user,
+            data=request.data,
+            partial=True
+        )
+        if serializer.is_valid():
+            serializer.save()
+            return Response({
+                'message': 'Profil mis à jour avec succès',
+                'photo_url': request.user.photo.url if request.user.photo else None
+            })
+        return Response(
+            serializer.errors,
+            status=status.HTTP_400_BAD_REQUEST
+        )
+
+class ModifierPhotoView(APIView):
+    permission_classes = [IsAuthenticated]
+    parser_classes = [MultiPartParser, FormParser]
+
+    def post(self, request):
+        photo = request.FILES.get('photo')
+        if not photo:
+            return Response(
+                {'erreur': 'Aucune photo fournie'},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        request.user.photo = photo
+        request.user.save()
+
+        return Response({
+            'message': 'Photo mise à jour avec succès',
+            'photo_url': request.build_absolute_uri(
+                request.user.photo.url
+            )
+        })

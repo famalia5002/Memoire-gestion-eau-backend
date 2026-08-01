@@ -10,6 +10,8 @@ urlpatterns = [
     
     # Profil
     path('profil/', views.ProfilView.as_view(), name='profil'),
+    path('profil/modifier/', views.ModifierProfilView.as_view(), name='modifier_profil'),
+    path('profil/photo/', views.ModifierPhotoView.as_view(), name='modifier_photo'),
     
     # Clients
     path('clients/', views.ListeClientsView.as_view(), name='liste_clients'),
