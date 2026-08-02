@@ -8,6 +8,7 @@ from rest_framework.views import APIView
 from rest_framework.permissions import IsAuthenticated
 from .models import Compteur
 from .serializers import CompteurSerializer
+from django.db.models import Q
 
 class ListeCompteursView(generics.ListCreateAPIView):
     permission_classes = [IsAuthenticated]
@@ -17,10 +18,19 @@ class ListeCompteursView(generics.ListCreateAPIView):
         user = self.request.user
         if user.role == 'super_admin':
             return Compteur.objects.all()
-        # Admin zone voit les compteurs de sa zone
+        
+        # Admin zone voit :
+        # - Les compteurs de sa zone (avec client)
+        # - Les compteurs disponibles (sans client)
         return Compteur.objects.filter(
-            client__zone=user.zone
-        )
+            Q(client__zone=user.zone) |  # compteurs avec client de sa zone
+            Q(client__isnull=True)        # compteurs sans client
+        ).distinct()
+
+    def get_serializer_context(self):
+        context = super().get_serializer_context()
+        context['request'] = self.request
+        return context
 
 class DetailCompteurView(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [IsAuthenticated]
@@ -86,6 +96,25 @@ class ControlerVanneView(APIView):
                 'etat_vanne': compteur.etat_vanne
             })
 
+        except Compteur.DoesNotExist:
+            return Response(
+                {'erreur': 'Compteur non trouvé'},
+                status=status.HTTP_404_NOT_FOUND
+            )
+
+class DesassocierCompteurView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request, compteur_id):
+        try:
+            compteur = Compteur.objects.get(id=compteur_id)
+            compteur.client = None
+            compteur.statut = 'disponible'
+            compteur.save()
+
+            return Response({
+                'message': f'Compteur {compteur.numero_compteur} désassocié avec succès'
+            })
         except Compteur.DoesNotExist:
             return Response(
                 {'erreur': 'Compteur non trouvé'},

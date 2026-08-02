@@ -18,7 +18,7 @@ class UtilisateurAdmin(UserAdmin):
         ('Informations supplémentaires', {
             'fields': (
                 'role', 'zone', 'telephone',
-                'adresse', 'latitude', 'longitude'
+                'adresse', 'latitude', 'longitude','photo'
             )
         }),
     )

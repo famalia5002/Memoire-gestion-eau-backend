@@ -4,13 +4,14 @@ from .models import Utilisateur
 
 class UtilisateurSerializer(serializers.ModelSerializer):
     photo_url = serializers.SerializerMethodField()
+    nom_complet = serializers.SerializerMethodField()
 
     class Meta:
         model = Utilisateur
         fields = [
             'id', 'username', 'email', 'first_name',
-            'last_name', 'role', 'zone', 'telephone',
-            'adresse', 'latitude', 'longitude',
+            'last_name', 'nom_complet', 'role', 'zone',
+            'telephone', 'adresse', 'latitude', 'longitude',
             'photo', 'photo_url'
         ]
         extra_kwargs = {
@@ -24,6 +25,9 @@ class UtilisateurSerializer(serializers.ModelSerializer):
                 return request.build_absolute_uri(obj.photo.url)
             return obj.photo.url
         return None
+
+    def get_nom_complet(self, obj):
+        return obj.nom_complet
 
 class CreerUtilisateurSerializer(serializers.ModelSerializer):
     password = serializers.CharField(
