@@ -6,4 +6,6 @@ urlpatterns = [
     path('<int:pk>/', views.DetailFactureView.as_view(), name='detail_facture'),
     path('<int:facture_id>/payer/', views.PayerFactureView.as_view(), name='payer_facture'),
     path('tarifs/', views.TarifView.as_view(), name='tarifs'),
+    path('generer/', views.GenererFactureView.as_view(), name='generer_facture'),
+    path('generer-toutes/', views.GenererToutesFacturesView.as_view(), name='generer_toutes'),
 ]
