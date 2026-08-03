@@ -73,10 +73,16 @@ class ConsommationClientView(APIView):
     def get(self, request):
         user = request.user
         periode = request.query_params.get('periode', 'journalier')
-        
-        # Récupérer les compteurs du client
+
         from compteurs.models import Compteur
-        compteurs = Compteur.objects.filter(client=user)
+        if user.role == 'super_admin':
+            compteurs = Compteur.objects.all()
+        elif user.role == 'admin_zone':
+            compteurs = Compteur.objects.filter(
+                client__zone=user.zone
+            )
+        else:
+            compteurs = Compteur.objects.filter(client=user)
 
         if periode == 'journalier':
             debut = timezone.now() - timedelta(days=1)
@@ -88,10 +94,12 @@ class ConsommationClientView(APIView):
         consommations = Consommation.objects.filter(
             compteur__in=compteurs,
             date_heure__gte=debut
-        )
+        ).order_by('-date_heure')
 
         serializer = ConsommationSerializer(
-            consommations, many=True
+            consommations,
+            many=True,
+            context={'request': request}
         )
         return Response(serializer.data)
 
