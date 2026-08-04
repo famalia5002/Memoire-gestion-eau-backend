@@ -54,6 +54,9 @@ class Facture(models.Model):
     )
     date_generation = models.DateTimeField(auto_now_add=True)
     date_limite = models.DateField()
+   
+    periode_debut = models.DateField(null=True, blank=True)
+    periode_fin = models.DateField(null=True, blank=True)
 
     def __str__(self):
         return f"Facture {self.id} - {self.client} - {self.statut}"

@@ -81,8 +81,6 @@ class GenererFactureView(APIView):
         from compteurs.models import Compteur
 
         client_id = request.data.get('client_id')
-        debut_periode = request.data.get('debut_periode')
-        fin_periode = request.data.get('fin_periode')
 
         try:
             client = Utilisateur.objects.get(
@@ -95,30 +93,22 @@ class GenererFactureView(APIView):
                 status=status.HTTP_404_NOT_FOUND
             )
 
-        # Récupérer tarif actif
         tarif = Tarif.objects.filter(
             date_fin__isnull=True
         ).first()
 
         if not tarif:
             return Response(
-                {'erreur': 'Aucun tarif défini. Créez un tarif d\'abord.'},
+                {'erreur': 'Aucun tarif défini'},
                 status=status.HTTP_400_BAD_REQUEST
             )
 
-        # Période par défaut = 30 derniers jours
-        if debut_periode and fin_periode:
-            from datetime import datetime
-            debut = datetime.fromisoformat(debut_periode)
-            fin = datetime.fromisoformat(fin_periode)
-        else:
-            fin = timezone.now()
-            debut = fin - timedelta(days=30)
+        # Période = mois en cours
+        fin = timezone.now()
+        debut = fin - timedelta(days=30)
 
-        # Compteurs du client
         compteurs = Compteur.objects.filter(client=client)
 
-        # Consommation sur la période
         consommations = Consommation.objects.filter(
             compteur__in=compteurs,
             date_heure__gte=debut,
@@ -133,30 +123,28 @@ class GenererFactureView(APIView):
                 status=status.HTTP_400_BAD_REQUEST
             )
 
-        # Vérifier si facture déjà générée sur cette période
         facture_existante = Facture.objects.filter(
             client=client,
-            date_generation__gte=debut,
-            date_generation__lte=fin
+            date_generation__gte=debut
         ).first()
 
         if facture_existante:
             return Response(
-                {'erreur': f'Facture #{facture_existante.id} déjà générée pour ce client sur cette période'},
+                {'erreur': f'Facture déjà générée pour ce client ce mois'},
                 status=status.HTTP_400_BAD_REQUEST
             )
 
-        # Calculer montant
         montant = round(volume_total * tarif.prix_litre, 2)
 
-        # Créer la facture
         facture = Facture.objects.create(
             client=client,
             tarif=tarif,
             volume_total=round(volume_total, 2),
             montant=montant,
             statut='en_attente',
-            date_limite=(timezone.now() + timedelta(days=30)).date()
+            date_limite=(timezone.now() + timedelta(days=30)).date(),
+            periode_debut=debut.date(),   # ← nouveau
+            periode_fin=fin.date()        # ← nouveau
         )
 
         serializer = FactureSerializer(
@@ -239,7 +227,9 @@ class GenererToutesFacturesView(APIView):
                 volume_total=round(volume_total, 2),
                 montant=montant,
                 statut='en_attente',
-                date_limite=(timezone.now() + timedelta(days=30)).date()
+                date_limite=(timezone.now() + timedelta(days=30)).date(),
+                 periode_debut=debut.date(),  
+                 periode_fin=fin.date()  
             )
             factures_creees.append(f'{client.nom_complet} : {montant} FCFA')
 

@@ -12,6 +12,6 @@ class AvisSerializer(serializers.ModelSerializer):
         model = Avis
         fields = [
             'id', 'client', 'client_detail',
-            'note', 'commentaire',
-            'date_avis', 'statut'
+            'note', 'commentaire', 'date_avis',
+            'statut', 'reponse_admin', 'date_reponse'  
         ]

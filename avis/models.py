@@ -21,9 +21,18 @@ class Avis(models.Model):
         choices=STATUTS,
         default='en_attente'
     )
+   
+    reponse_admin = models.TextField(
+        blank=True,
+        null=True
+    )
+    date_reponse = models.DateTimeField(
+        blank=True,
+        null=True
+    )
 
     def __str__(self):
-        return f"Avis {self.client} - {self.note}⭐"
+        return f"Avis {self.client} - {self.note} étoiles"
 
     class Meta:
         ordering = ['-date_avis']
