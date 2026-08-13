@@ -30,4 +30,5 @@ urlpatterns = [
     path('api/alertes/', include('alertes.urls')),
     path('api/avis/', include('avis.urls')),
     path('api/dashboard/', include('dashboard.urls')),
+    path('api/demandes/', include('demandes.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+      .header {
+        background: linear-gradient(135deg, #1f4e79, #2e75b6);
+        padding: 30px;
+        text-align: center;
+      }
+      .header h1 {
+        color: white;
+        margin: 0;
+        font-size: 24px;
+      }
+      .header p {
+        color: #aed6f1;
+        margin: 5px 0 0;
+      }
+      .body {
+        padding: 30px;
+      }
+      .welcome {
+        font-size: 18px;
+        color: #333;
+        margin-bottom: 20px;
+      }
+      .credentials {
+        background: #ebf5fb;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px 0;
+      }
+      .credentials h3 {
+        color: #1f4e79;
+        margin: 0 0 15px;
+      }
+      .credential-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px solid #d6eaf8;
+      }
+      .credential-item:last-child {
+        border-bottom: none;
+      }
+      .label {
+        color: #666;
+        font-size: 14px;
+      }
+      .value {
+        color: #1f4e79;
+        font-weight: bold;
+        font-size: 16px;
+      }
+      .warning {
+        background: #fef9e7;
+        border-left: 4px solid #f39c12;
+        padding: 15px;
+        border-radius: 6px;
+        margin: 20px 0;
+      }
+      .warning p {
+        margin: 0;
+        color: #856404;
+        font-size: 14px;
+      }
+      .steps {
+        margin: 20px 0;
+      }
+      .step {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 15px;
+      }
+      .step-number {
+        background: #2e75b6;
+        color: white;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        margin-right: 15px;
+        flex-shrink: 0;
+        font-size: 14px;
+      }
+      .step-text {
+        color: #444;
+        font-size: 14px;
+        padding-top: 4px;
+      }
+      .footer {
+        background: #1f4e79;
+        padding: 20px;
+        text-align: center;
+      }
+      .footer p {
+        color: #aed6f1;
+        margin: 0;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- En-tête -->
+      <div class="header">
+        <h1>Smart Ndiyam</h1>
+        <p>Système Intelligent de Gestion d'Eau IoT</p>
+      </div>
+
+      <!-- Corps -->
+      <div class="body">
+        <p class="welcome">Bonjour <strong>{{ prenom }} {{ nom }}</strong>,</p>
+        <p style="color: #555; line-height: 1.6">
+          Votre demande d'abonnement a été
+          <strong style="color: #1f6b3a">acceptée</strong> ! Votre compte a été
+          créé avec succès. Voici vos identifiants de connexion :
+        </p>
+
+        <!-- Identifiants -->
+        <div class="credentials">
+          <h3>Vos identifiants de connexion</h3>
+          <div class="credential-item">
+            <span class="label">Nom d'utilisateur</span>
+            <span class="value">{{ username }}</span>
+          </div>
+          <div class="credential-item">
+            <span class="label">Mot de passe temporaire</span>
+            <span class="value">{{ password }}</span>
+          </div>
+          <div class="credential-item">
+            <span class="label">Zone</span>
+            <span class="value">{{ zone }}</span>
+          </div>
+        </div>
+
+        <!-- Avertissement -->
+        <div class="warning">
+          <p>
+            Veuillez changer votre mot de passe dès votre première connexion sur
+            l'application mobile Smart Ndiyam.
+          </p>
+        </div>
+
+        <!-- Prochaines étapes -->
+        <div class="steps">
+          <p style="font-weight: bold; color: #333; margin-bottom: 15px">
+            Prochaines étapes :
+          </p>
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-text">
+              Un technicien va contacter pour installer votre compteur connecté.
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-text">
+              Téléchargez l'application mobile <strong>Smart Ndiyam</strong>.
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-text">
+              Connectez-vous avec vos identifiants pour suivre votre
+              consommation.
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <div class="step-text">
+              Changez votre mot de passe temporaire dans votre profil.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pied de page -->
+      <div class="footer">
+        <p>Smart Ndiyam - Système Intelligent de Gestion d'Eau IoT | Sénégal</p>
+        <p style="margin-top: 5px">
+          Cet email a été envoyé automatiquement, merci de ne pas y répondre.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

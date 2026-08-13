@@ -44,20 +44,26 @@ class AssocierCompteurClientView(APIView):
         try:
             compteur = Compteur.objects.get(id=compteur_id)
             client_id = request.data.get('client_id')
-            
+
             from utilisateurs.models import Utilisateur
             client = Utilisateur.objects.get(
                 id=client_id,
                 role='client'
             )
-            
+
             compteur.client = client
             compteur.statut = 'attribue'
             compteur.save()
-            
+
+            # ← Passer le client à "actif" automatiquement
+            if client.statut_abonnement == 'en_traitement':
+                client.statut_abonnement = 'actif'
+                client.save()
+
             return Response({
                 'message': f'Compteur {compteur.numero_compteur} associé à {client.nom_complet}'
             })
+
         except Compteur.DoesNotExist:
             return Response(
                 {'erreur': 'Compteur non trouvé'},

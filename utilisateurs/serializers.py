@@ -12,7 +12,10 @@ class UtilisateurSerializer(serializers.ModelSerializer):
             'id', 'username', 'email', 'first_name',
             'last_name', 'nom_complet', 'role', 'zone',
             'telephone', 'adresse', 'latitude', 'longitude',
-            'photo', 'photo_url'
+            'photo', 'photo_url',
+            'type_client', 'statut_abonnement',  
+            'doc_cin', 'doc_attestation',          
+            'doc_contrat_location', 'doc_convention'  
         ]
         extra_kwargs = {
             'photo': {'write_only': True}
@@ -23,7 +26,6 @@ class UtilisateurSerializer(serializers.ModelSerializer):
             request = self.context.get('request')
             if request:
                 return request.build_absolute_uri(obj.photo.url)
-            return obj.photo.url
         return None
 
     def get_nom_complet(self, obj):
@@ -41,7 +43,12 @@ class CreerUtilisateurSerializer(serializers.ModelSerializer):
         fields = [
             'username', 'email', 'first_name', 'last_name',
             'password', 'role', 'zone', 'telephone',
-            'adresse', 'latitude', 'longitude', 'photo'
+            'adresse', 'latitude', 'longitude', 'photo','type_client',           # ← ajouter
+            'statut_abonnement',     
+            'doc_cin',               
+            'doc_attestation',      
+            'doc_contrat_location',  
+            'doc_convention', 
         ]
 
     def create(self, validated_data):

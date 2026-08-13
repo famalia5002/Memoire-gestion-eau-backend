@@ -45,6 +45,34 @@ class Utilisateur(AbstractUser):
         null=True
     )
 
+    TYPE_CLIENT = [
+        ('proprietaire', 'Propriétaire'),
+        ('locataire', 'Locataire'),
+    ]
+
+    STATUT_ABONNEMENT = [
+        ('actif', 'Actif'),
+        ('en_traitement', 'En cours de traitement'),
+        ('suspendu', 'Suspendu'),
+        ('resilie', 'Résilié'),
+    ]
+
+    type_client = models.CharField(
+        max_length=20,
+        choices=TYPE_CLIENT,
+        blank=True, null=True
+    )
+    statut_abonnement = models.CharField(
+        max_length=20,
+        choices=STATUT_ABONNEMENT,
+        default='actif'
+    )
+    # Documents fournis
+    doc_cin = models.BooleanField(default=False)
+    doc_attestation = models.BooleanField(default=False)
+    doc_contrat_location = models.BooleanField(default=False)
+    doc_convention = models.BooleanField(default=False)
+
     def __str__(self):
         return f"{self.username} ({self.role})"
 
