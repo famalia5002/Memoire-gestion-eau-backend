@@ -1,15 +1,26 @@
 from rest_framework import serializers
 from .models import Facture, Tarif
 from utilisateurs.serializers import UtilisateurSerializer
+from consommation.serializers import IndexSerializer
 
 class TarifSerializer(serializers.ModelSerializer):
+    type_zone_label = serializers.CharField(
+        source='get_type_zone_display',
+        read_only=True
+    )
+    type_abonne_label = serializers.CharField(
+        source='get_type_abonne_display',
+        read_only=True
+    )
+
     class Meta:
         model = Tarif
-        fields = '__all__'
-
-from consommation.serializers import IndexSerializer
-from compteurs.models import Compteur
-from consommation.models import Index
+        fields = [
+            'id', 'type_zone', 'type_zone_label',
+            'type_abonne', 'type_abonne_label',
+            'prix_ts', 'prix_tp', 'prix_td',
+            'date_debut', 'date_fin', 'actif'
+        ]
 
 class FactureSerializer(serializers.ModelSerializer):
     client_detail = UtilisateurSerializer(
@@ -21,7 +32,7 @@ class FactureSerializer(serializers.ModelSerializer):
         read_only=True
     )
     index_list = serializers.SerializerMethodField()
-    periode_label = serializers.SerializerMethodField()  # ← nouveau
+    periode_label = serializers.SerializerMethodField()
 
     class Meta:
         model = Facture
@@ -32,8 +43,7 @@ class FactureSerializer(serializers.ModelSerializer):
             'statut', 'mode_paiement',
             'date_generation', 'date_limite',
             'periode_debut', 'periode_fin',
-            'periode_label',  # ← nouveau
-            'index_list'
+            'periode_label', 'index_list'
         ]
 
     def get_index_list(self, obj):
@@ -46,23 +56,17 @@ class FactureSerializer(serializers.ModelSerializer):
         return IndexSerializer(index, many=True).data
 
     def get_periode_label(self, obj):
-        # Générer le label de la période
+        mois_fr = [
+            'Janvier', 'Février', 'Mars', 'Avril',
+            'Mai', 'Juin', 'Juillet', 'Août',
+            'Septembre', 'Octobre', 'Novembre', 'Décembre'
+        ]
         if obj.periode_debut and obj.periode_fin:
-            mois_fr = [
-                'Janvier', 'Février', 'Mars', 'Avril',
-                'Mai', 'Juin', 'Juillet', 'Août',
-                'Septembre', 'Octobre', 'Novembre', 'Décembre'
-            ]
-            mois = mois_fr[obj.periode_fin.month - 1]
+            mois_debut = mois_fr[obj.periode_debut.month - 1]
+            mois_fin = mois_fr[obj.periode_fin.month - 1]
             annee = obj.periode_fin.year
-            return f"{mois} {annee}"
+            return f"{mois_debut} - {mois_fin} {annee}"
         else:
-            # Si pas de période définie, utiliser la date de génération
-            mois_fr = [
-                'Janvier', 'Février', 'Mars', 'Avril',
-                'Mai', 'Juin', 'Juillet', 'Août',
-                'Septembre', 'Octobre', 'Novembre', 'Décembre'
-            ]
             mois = mois_fr[obj.date_generation.month - 1]
             annee = obj.date_generation.year
             return f"{mois} {annee}"

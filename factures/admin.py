@@ -1,15 +1,14 @@
 from django.contrib import admin
-from django.contrib import admin
 from .models import Facture, Tarif
-
-# Register your models here.
 
 @admin.register(Tarif)
 class TarifAdmin(admin.ModelAdmin):
     list_display = [
-        'type_eau', 'prix_litre',
-        'date_debut', 'date_fin'
+        'type_zone', 'type_abonne',
+        'prix_ts', 'prix_tp', 'prix_td',
+        'date_debut', 'actif'
     ]
+    list_filter = ['type_zone', 'type_abonne', 'actif']
     ordering = ['-date_debut']
 
 @admin.register(Facture)
