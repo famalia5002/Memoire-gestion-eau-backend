@@ -1,0 +1,847 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2026-08-01T02:19:30.967Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "famalia (super_admin)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2026-08-01T05:33:13.682Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "famalia (super_admin)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2026-08-01T05:37:09.562Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "famalia (super_admin)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Email address\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2026-08-01T20:38:01.407Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "4",
+    "object_repr": "mariamalia (client)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2026-08-01T22:35:26.731Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "5",
+    "object_repr": "mai (admin_zone)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Role\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2026-08-02T00:43:42.636Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "5",
+    "object_repr": "mai (admin_zone)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Zone\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2026-08-03T05:01:19.983Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Tarif eau_potable - 1.5 FCFA/L",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2026-08-04T20:39:46.134Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "1",
+    "object_repr": "Avis client1 (client) - 4⭐",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2026-08-04T22:48:46.720Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "2",
+    "object_repr": "Avis fati (client) - 2 étoiles",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2026-08-04T22:50:59.189Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "2",
+    "object_repr": "Avis fati (client) - 2 étoiles",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Statut\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2026-08-04T22:52:55.942Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Alerte surconsommation - Compteur C001",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Statut\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2026-08-04T22:56:53.638Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "2",
+    "object_repr": "Avis fati (client) - 2 étoiles",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Statut\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2026-08-13T21:18:33.987Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "Tarif Zone assainie - Domestique diamètre 15mm",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2026-08-13T22:42:22.174Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "Tarif Zone non assainie - Domestique diamètre 15mm",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2026-08-13T22:51:35.420Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "Facture 1 - client1 (client) - payee",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2026-08-13T23:05:56.846Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "Facture 2 - client1 (client) - payee",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2026-08-14T00:48:32.757Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "3",
+    "object_repr": "Facture 3 - client1 (client) - en_attente",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "drj6hmtcl917k84z20lds78fdpx9cj0j",
+  "fields": {
+    "session_data": ".eJxVjEEOgjAQRe_StWkYBkrr0j1nIDPT1qKmTSisjHcXEha6fe_9_1YTbWuathqWafbqqkBdfhmTPEM-hH9QvhctJa_LzPpI9GmrHosPr9vZ_h0kqmlfIwMDMPsO2VrpIhgTGxRwyD2gmEFaR2IJGaEfKELbOCs7NL0xxOrzBd0MN4w:1wqGPj:dNuEGjob87j5XtFgNQhui6ORxkt90fp1uMYvnJ_1PEE",
+    "expire_date": "2026-08-15T20:34:35.288Z"
+  }
+},
+{
+  "model": "utilisateurs.utilisateur",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$Lzo5LBUP8UX0MHUUlgXc3a$Yvo3f2zbl+ffJpm7+Qdg2ZL9qSKo5NTh1xguq/HICFw=",
+    "last_login": "2026-08-01T20:34:35.284Z",
+    "is_superuser": true,
+    "username": "famalia",
+    "first_name": "Fatimata",
+    "last_name": "Djigo",
+    "email": "fatimatu9523@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-07-19T21:20:11Z",
+    "role": "super_admin",
+    "zone": "",
+    "telephone": "",
+    "adresse": "",
+    "latitude": null,
+    "longitude": null,
+    "photo": "photos/utilisateurs/famalia/Gold_Photo_Collage_Fashion_Sale_Announcement_Poster.png",
+    "type_client": null,
+    "statut_abonnement": "actif",
+    "doc_cin": false,
+    "doc_attestation": false,
+    "doc_contrat_location": false,
+    "doc_convention": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "utilisateurs.utilisateur",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$z9yB019DFZwlLUU7iukEts$ECbcq0nqHbAVmCaXqod8SQ2koTFF1yd090aYqoSuuNg=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "client1",
+    "first_name": "Aminat",
+    "last_name": "Diallo",
+    "email": "client1@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-07-19T22:34:59.179Z",
+    "role": "client",
+    "zone": "Dakar 1",
+    "telephone": "77 123 45 65",
+    "adresse": "Dakar Plateau",
+    "latitude": 14.6937,
+    "longitude": -17.4441,
+    "photo": "photos/utilisateurs/client1/Gold_Photo_Collage_Fashion_Sale_Announcement_Poster.png",
+    "type_client": "proprietaire",
+    "statut_abonnement": "actif",
+    "doc_cin": false,
+    "doc_attestation": false,
+    "doc_contrat_location": false,
+    "doc_convention": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "utilisateurs.utilisateur",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$AaYtJyARL0qYoi2ouDso2P$R+j5mokHR2g/8dNpHJy/a/3kv1yCZ+jJ3pvlSGmU/Ok=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "fati",
+    "first_name": "astou",
+    "last_name": "sy",
+    "email": "faa@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-07-26T21:59:35.001Z",
+    "role": "client",
+    "zone": "Dakar 1",
+    "telephone": null,
+    "adresse": "patte d'oie",
+    "latitude": 14.746488,
+    "longitude": -17.440689,
+    "photo": "",
+    "type_client": null,
+    "statut_abonnement": "actif",
+    "doc_cin": false,
+    "doc_attestation": false,
+    "doc_contrat_location": false,
+    "doc_convention": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "utilisateurs.utilisateur",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$LuZiHtiPeEc2cp5U3e86yf$CoUUfzzl2y36gdY8qY0W6rE3cytCY9nTgeAG7t1B2Cc=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "mai",
+    "first_name": "mariam",
+    "last_name": "sy",
+    "email": "faa@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-08-01T20:40:13Z",
+    "role": "admin_zone",
+    "zone": "Dakar",
+    "telephone": "771234567",
+    "adresse": "pikine rue 10",
+    "latitude": null,
+    "longitude": null,
+    "photo": "photos/utilisateurs/mai/Gold_Photo_Collage_Fashion_Sale_Announcement_Poster.png",
+    "type_client": null,
+    "statut_abonnement": "actif",
+    "doc_cin": false,
+    "doc_attestation": false,
+    "doc_contrat_location": false,
+    "doc_convention": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "utilisateurs.utilisateur",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$kt5HuwbEsbqQdSvjIgPYpt$LFM1voT3gY/EZGGvbmVf2B3dBTM9OpUC8TgcOV7qxXM=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "des",
+    "first_name": "r",
+    "last_name": "f",
+    "email": "w523@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-08-01T20:49:13.445Z",
+    "role": "client",
+    "zone": "Diourbel",
+    "telephone": "776543212",
+    "adresse": null,
+    "latitude": null,
+    "longitude": null,
+    "photo": "photos/utilisateurs/des/Gold_Photo_Collage_Fashion_Sale_Announcement_Poster.png",
+    "type_client": null,
+    "statut_abonnement": "actif",
+    "doc_cin": false,
+    "doc_attestation": false,
+    "doc_contrat_location": false,
+    "doc_convention": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "utilisateurs.utilisateur",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$emh8SRhok5DTFej6cCJpbX$qpfpNXCYzQaImPZNcR4J5Lb8Q0vZuslllUA4/Dc75JM=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "se",
+    "first_name": "f",
+    "last_name": "s",
+    "email": "fa523@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-08-01T22:37:24.291Z",
+    "role": "client",
+    "zone": "Dakar 2",
+    "telephone": "771230954",
+    "adresse": null,
+    "latitude": null,
+    "longitude": null,
+    "photo": "",
+    "type_client": null,
+    "statut_abonnement": "actif",
+    "doc_cin": false,
+    "doc_attestation": false,
+    "doc_contrat_location": false,
+    "doc_convention": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "utilisateurs.utilisateur",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$VMDvM2As0X31EDtKo1KDDe$5DhW3PxDi2EkPV3ViCby1Yn46l+FHGF9VQKx8b1ni8Q=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "ab",
+    "first_name": "Abasse",
+    "last_name": "Djigo",
+    "email": "basse523@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-08-02T01:13:45.866Z",
+    "role": "admin_zone",
+    "zone": "Thiès",
+    "telephone": "776532541",
+    "adresse": null,
+    "latitude": null,
+    "longitude": null,
+    "photo": "photos/utilisateurs/ab/WhatsApp_Image_2026-07-08_at_15.30.15.jpeg",
+    "type_client": null,
+    "statut_abonnement": "actif",
+    "doc_cin": false,
+    "doc_attestation": false,
+    "doc_contrat_location": false,
+    "doc_convention": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "utilisateurs.utilisateur",
+  "pk": 9,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$428je3Ven94abPx2I1oKUN$p8j/9v/rPk671GxzXAEjjLem27o9coHUJcZDGDY0e9I=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "dev",
+    "first_name": "david",
+    "last_name": "diop",
+    "email": "dev23@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-08-02T19:36:20.110Z",
+    "role": "admin_zone",
+    "zone": "Diourbel",
+    "telephone": "77905432",
+    "adresse": null,
+    "latitude": null,
+    "longitude": null,
+    "photo": "photos/utilisateurs/dev/Gold_Photo_Collage_Fashion_Sale_Announcement_Poster_wVFVohh.png",
+    "type_client": null,
+    "statut_abonnement": "actif",
+    "doc_cin": false,
+    "doc_attestation": false,
+    "doc_contrat_location": false,
+    "doc_convention": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "utilisateurs.utilisateur",
+  "pk": 12,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$vftUozNfmGc16t96JxVG1s$L4KHkcZ4cLklOkQwyPsgxZSyjNjeo9/uwHnqEnfEbNo=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "moussa.diallo",
+    "first_name": "Moussa",
+    "last_name": "Diallo",
+    "email": "moussa@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-08-12T23:03:45.884Z",
+    "role": "client",
+    "zone": "Dakar 1",
+    "telephone": "77 456 78 90",
+    "adresse": "Pikine Rue 10",
+    "latitude": null,
+    "longitude": null,
+    "photo": "",
+    "type_client": "proprietaire",
+    "statut_abonnement": "en_traitement",
+    "doc_cin": false,
+    "doc_attestation": false,
+    "doc_contrat_location": false,
+    "doc_convention": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "utilisateurs.utilisateur",
+  "pk": 14,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$2v73k19wzsoROf54gq5Z41$w0NuMRLthevq5vjngAYM3+zw0XAR2RaGgNeogDXV+eo=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "maria.ba",
+    "first_name": "Maria",
+    "last_name": "Ba",
+    "email": "fatimatu9523@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-08-13T20:31:29.288Z",
+    "role": "client",
+    "zone": "Dakar 1",
+    "telephone": "77 912 63 92",
+    "adresse": "Patte d'oie",
+    "latitude": null,
+    "longitude": null,
+    "photo": "",
+    "type_client": "proprietaire",
+    "statut_abonnement": "en_traitement",
+    "doc_cin": true,
+    "doc_attestation": false,
+    "doc_contrat_location": false,
+    "doc_convention": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "compteurs.compteur",
+  "pk": 1,
+  "fields": {
+    "numero_compteur": "C001",
+    "serie": "SN-001-2025",
+    "statut": "attribue",
+    "etat_vanne": "ouverte",
+    "client": 2,
+    "date_installation": "2026-07-22T00:56:05.459Z"
+  }
+},
+{
+  "model": "compteurs.compteur",
+  "pk": 2,
+  "fields": {
+    "numero_compteur": "C002",
+    "serie": "SN-2026-00",
+    "statut": "attribue",
+    "etat_vanne": "ouverte",
+    "client": 3,
+    "date_installation": "2026-08-02T01:37:32.020Z"
+  }
+},
+{
+  "model": "compteurs.compteur",
+  "pk": 3,
+  "fields": {
+    "numero_compteur": "C003",
+    "serie": "SN-2026-03",
+    "statut": "disponible",
+    "etat_vanne": "ouverte",
+    "client": null,
+    "date_installation": "2026-08-02T02:32:16.808Z"
+  }
+},
+{
+  "model": "compteurs.compteur",
+  "pk": 4,
+  "fields": {
+    "numero_compteur": "C004",
+    "serie": "Sn-2025-007",
+    "statut": "attribue",
+    "etat_vanne": "ouverte",
+    "client": null,
+    "date_installation": "2026-08-02T02:37:38.785Z"
+  }
+},
+{
+  "model": "consommation.consommation",
+  "pk": 1,
+  "fields": {
+    "compteur": 1,
+    "volume": 25.5,
+    "date_heure": "2026-07-22T01:09:02.759Z"
+  }
+},
+{
+  "model": "consommation.consommation",
+  "pk": 3,
+  "fields": {
+    "compteur": 1,
+    "volume": 150.0,
+    "date_heure": "2026-08-04T20:32:03.893Z"
+  }
+},
+{
+  "model": "consommation.index",
+  "pk": 1,
+  "fields": {
+    "compteur": 1,
+    "valeur_index": 0.0255,
+    "date_releve": "2026-07-22T01:09:02.777Z"
+  }
+},
+{
+  "model": "consommation.index",
+  "pk": 2,
+  "fields": {
+    "compteur": 1,
+    "valeur_index": 0.051,
+    "date_releve": "2026-07-22T01:10:15.799Z"
+  }
+},
+{
+  "model": "consommation.index",
+  "pk": 3,
+  "fields": {
+    "compteur": 1,
+    "valeur_index": 0.20099999999999998,
+    "date_releve": "2026-08-04T20:32:03.937Z"
+  }
+},
+{
+  "model": "factures.tarif",
+  "pk": 1,
+  "fields": {
+    "type_zone": "assainie",
+    "type_abonne": "domestique_15mm",
+    "prix_ts": 202.0,
+    "prix_tp": 697.97,
+    "prix_td": 878.35,
+    "date_debut": "2026-08-02",
+    "date_fin": null,
+    "actif": true
+  }
+},
+{
+  "model": "factures.tarif",
+  "pk": 2,
+  "fields": {
+    "type_zone": "assainie",
+    "type_abonne": "domestique_15mm",
+    "prix_ts": 202.0,
+    "prix_tp": 697.97,
+    "prix_td": 878.35,
+    "date_debut": "2025-01-01",
+    "date_fin": null,
+    "actif": true
+  }
+},
+{
+  "model": "factures.tarif",
+  "pk": 3,
+  "fields": {
+    "type_zone": "non_assainie",
+    "type_abonne": "domestique_15mm",
+    "prix_ts": 188.5,
+    "prix_tp": 636.34,
+    "prix_td": 778.86,
+    "date_debut": "2025-01-01",
+    "date_fin": null,
+    "actif": true
+  }
+},
+{
+  "model": "factures.facture",
+  "pk": 4,
+  "fields": {
+    "client": 2,
+    "tarif": 1,
+    "volume_total": 175.5,
+    "montant": 35.45,
+    "statut": "en_attente",
+    "mode_paiement": null,
+    "date_generation": "2026-08-14T00:48:47.226Z",
+    "date_limite": "2026-10-13",
+    "periode_debut": "2026-06-15",
+    "periode_fin": "2026-08-14"
+  }
+},
+{
+  "model": "alertes.alerte",
+  "pk": 1,
+  "fields": {
+    "compteur": 1,
+    "type_alerte": "surconsommation",
+    "statut": "resolue",
+    "date": "2026-08-04T20:32:03.943Z",
+    "date_resolution": "2026-08-04T22:53:16.330Z"
+  }
+},
+{
+  "model": "alertes.commande",
+  "pk": 1,
+  "fields": {
+    "compteur": 1,
+    "action": "fermer",
+    "statut": "envoyee",
+    "effectuee_par": 1,
+    "date_commande": "2026-08-02T01:35:37.753Z"
+  }
+},
+{
+  "model": "alertes.commande",
+  "pk": 2,
+  "fields": {
+    "compteur": 1,
+    "action": "ouvrir",
+    "statut": "envoyee",
+    "effectuee_par": 1,
+    "date_commande": "2026-08-02T01:35:40.313Z"
+  }
+},
+{
+  "model": "avis.avis",
+  "pk": 1,
+  "fields": {
+    "client": 2,
+    "note": 4,
+    "commentaire": "Très bon service",
+    "date_avis": "2026-08-04T20:39:46.127Z",
+    "statut": "traite",
+    "reponse_admin": "Merci",
+    "date_reponse": "2026-08-04T22:25:27.762Z"
+  }
+},
+{
+  "model": "avis.avis",
+  "pk": 2,
+  "fields": {
+    "client": 3,
+    "note": 2,
+    "commentaire": "Pas mal,votre service",
+    "date_avis": "2026-08-04T22:48:46.701Z",
+    "statut": "en_attente",
+    "reponse_admin": "",
+    "date_reponse": null
+  }
+},
+{
+  "model": "demandes.demandeabonnement",
+  "pk": 1,
+  "fields": {
+    "nom": "Diallo",
+    "prenom": "Moussa",
+    "email": "moussa@gmail.com",
+    "telephone": "77 456 78 90",
+    "adresse": "Pikine Rue 10",
+    "zone": "Dakar 1",
+    "latitude": null,
+    "longitude": null,
+    "type_client": "proprietaire",
+    "photo_cin": "",
+    "photo_attestation": "",
+    "photo_contrat": "",
+    "photo_convention": "",
+    "statut": "acceptee",
+    "motif_refus": null,
+    "date_demande": "2026-08-12T19:54:12.664Z",
+    "date_traitement": "2026-08-12T23:03:46.712Z",
+    "traite_par": 1
+  }
+},
+{
+  "model": "demandes.demandeabonnement",
+  "pk": 2,
+  "fields": {
+    "nom": "Sall",
+    "prenom": "Fatou",
+    "email": "fatou@gmail.com",
+    "telephone": "77 111 22 33",
+    "adresse": "HLM",
+    "zone": "Dakar 1",
+    "latitude": null,
+    "longitude": null,
+    "type_client": "proprietaire",
+    "photo_cin": "demandes/cin/SCANNE-COPIE_CNI-_Mme_DJIGO_0001.pdf",
+    "photo_attestation": "",
+    "photo_contrat": "",
+    "photo_convention": "",
+    "statut": "refusee",
+    "motif_refus": "n",
+    "date_demande": "2026-08-12T23:21:51.249Z",
+    "date_traitement": "2026-08-12T23:22:55.508Z",
+    "traite_par": 1
+  }
+},
+{
+  "model": "demandes.demandeabonnement",
+  "pk": 3,
+  "fields": {
+    "nom": "Ba",
+    "prenom": "Maria",
+    "email": "fatimatu9523@gmail.com",
+    "telephone": "77 912 63 92",
+    "adresse": "Patte d'oie",
+    "zone": "Dakar 1",
+    "latitude": null,
+    "longitude": null,
+    "type_client": "proprietaire",
+    "photo_cin": "demandes/cin/SCANNE-COPIE_CNI-_Mme_DJIGO_0001_AVT8SRe.pdf",
+    "photo_attestation": "",
+    "photo_contrat": "",
+    "photo_convention": "",
+    "statut": "acceptee",
+    "motif_refus": null,
+    "date_demande": "2026-08-13T20:04:09.197Z",
+    "date_traitement": "2026-08-13T20:05:33.087Z",
+    "traite_par": 1
+  }
+},
+{
+  "model": "demandes.demandeabonnement",
+  "pk": 4,
+  "fields": {
+    "nom": "Ba",
+    "prenom": "Maria",
+    "email": "fatimatu9523@gmail.com",
+    "telephone": "77 912 63 92",
+    "adresse": "Patte d'oie",
+    "zone": "Dakar 1",
+    "latitude": null,
+    "longitude": null,
+    "type_client": "proprietaire",
+    "photo_cin": "demandes/cin/SCANNE-COPIE_CNI-_Mme_DJIGO_0001_5SKrPBo.pdf",
+    "photo_attestation": "",
+    "photo_contrat": "",
+    "photo_convention": "",
+    "statut": "acceptee",
+    "motif_refus": null,
+    "date_demande": "2026-08-13T20:13:37.234Z",
+    "date_traitement": "2026-08-13T20:31:33.601Z",
+    "traite_par": 1
+  }
+}
+]
