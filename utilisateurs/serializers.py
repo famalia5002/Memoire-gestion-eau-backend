@@ -23,6 +23,11 @@ class UtilisateurSerializer(serializers.ModelSerializer):
 
     def get_photo_url(self, obj):
         if obj.photo:
+            photo_str = str(obj.photo)
+            # Si c'est déjà une URL Cloudinary complète
+            if photo_str.startswith('http'):
+                return photo_str
+            # Si c'est un fichier local
             request = self.context.get('request')
             if request:
                 return request.build_absolute_uri(obj.photo.url)
