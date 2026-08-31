@@ -221,6 +221,1080 @@
   }
 },
 {
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2026-08-22T05:21:21.015Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "client1 (client)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2026-08-22T05:23:24.378Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "client1 (client)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2026-08-22T05:26:46.129Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "3",
+    "object_repr": "fati (client)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2026-08-22T05:29:22.945Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "client1 (client)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2026-08-22T05:30:26.528Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "amina (client)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Username\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2026-08-22T05:32:39.431Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "14",
+    "object_repr": "maria.ba (client)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2026-08-22T05:32:44.915Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "14",
+    "object_repr": "maria.ba (client)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2026-08-22T05:33:53.720Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "amina (client)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2026-08-22T05:34:01.124Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "amina (client)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2026-08-22T05:35:25.493Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "14",
+    "object_repr": "maria.ba (client)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2026-08-22T05:35:35.089Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "14",
+    "object_repr": "maria.ba (client)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2026-08-22T23:05:44.161Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "aminata (client)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Username\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2026-08-22T23:09:20.251Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "aminata (client)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2026-08-22T23:09:26.543Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "aminata (client)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2026-08-22T23:11:58.851Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "14",
+    "object_repr": "maria.ba (client)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2026-08-22T23:12:06.229Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "14",
+    "object_repr": "maria.ba (client)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2026-08-22T23:38:01.872Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "aminata (client)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2026-08-22T23:38:07.103Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "aminata (client)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2026-08-22T23:39:00.258Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "14",
+    "object_repr": "maria.ba (client)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2026-08-22T23:39:03.969Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "14",
+    "object_repr": "maria.ba (client)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2026-08-23T23:53:32.720Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "5",
+    "object_repr": "Demande Sy Adama - acceptee",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2026-08-24T00:38:43.907Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "7",
+    "object_repr": "Demande Bah V - en_attente",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2026-08-24T00:41:08.823Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "8",
+    "object_repr": "Demande Nk U - en_attente",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2026-08-24T00:53:38.741Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "famalia (super_admin)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Email\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2026-08-24T00:54:35.856Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "5",
+    "object_repr": "mai (admin_zone)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Email\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2026-08-25T01:40:24.790Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Compteur C001 - 25.0L",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2026-08-25T01:43:49.395Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Compteur C003 - 45.0L",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2026-08-25T01:44:53.828Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Compteur C001 - 25.0L",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2026-08-25T02:17:12.321Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "5",
+    "object_repr": "Facture 5 - maria.ba (client) - en_attente",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2026-08-25T05:29:21.966Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "6",
+    "object_repr": "Facture 6 - maria.ba (client) - en_attente",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2026-08-25T05:34:26.885Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "7",
+    "object_repr": "Facture 7 - maria.ba (client) - en_attente",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2026-08-25T05:36:45.636Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "8",
+    "object_repr": "Facture 8 - maria.ba (client) - en_attente",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2026-08-25T05:44:41.016Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "9",
+    "object_repr": "Facture 9 - maria.ba (client) - en_attente",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2026-08-25T05:51:40.457Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "10",
+    "object_repr": "Facture 10 - maria.ba (client) - en_attente",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2026-08-25T06:04:39.477Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "11",
+    "object_repr": "Facture 11 - maria.ba (client) - en_attente",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2026-08-25T06:12:21.956Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "14",
+    "object_repr": "maria.ba (client)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Email\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2026-08-25T06:12:42.898Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "3",
+    "object_repr": "fati (client)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2026-08-25T06:13:08.832Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "3",
+    "object_repr": "fati (client)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Email\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2026-08-25T06:26:44.623Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "13",
+    "object_repr": "Facture 13 - fati (client) - payee",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2026-08-25T06:28:29.487Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "14",
+    "object_repr": "Facture 14 - fati (client) - en_attente",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2026-08-25T06:45:55.942Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "15",
+    "object_repr": "Facture 15 - fati (client) - en_attente",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2026-08-25T06:46:55.522Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "16",
+    "object_repr": "Facture 16 - fati (client) - en_attente",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2026-08-28T23:34:19.061Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "aminata (client)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2026-08-28T23:34:23.680Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "aminata (client)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2026-08-29T00:54:18.213Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "3",
+    "object_repr": "Alerte fuite - Compteur C001",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2026-08-30T01:38:47.017Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4",
+    "object_repr": "Alerte fuite - Compteur C001",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2026-08-30T01:41:07.381Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4",
+    "object_repr": "Alerte fuite - Compteur C001",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2026-08-30T01:41:19.652Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "5",
+    "object_repr": "Alerte fuite - Compteur C001",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2026-08-30T02:05:20.772Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "6",
+    "object_repr": "Alerte vanne_fermee - Compteur C001",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2026-08-30T02:05:32.894Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "5",
+    "object_repr": "Alerte fuite - Compteur C001",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2026-08-30T02:05:52.358Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "7",
+    "object_repr": "Alerte fuite - Compteur C001",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2026-08-30T02:06:24.114Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "7",
+    "object_repr": "Alerte fuite - Compteur C001",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2026-08-30T02:06:53.166Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "8",
+    "object_repr": "Alerte fuite - Compteur C001",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2026-08-30T02:12:14.059Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "8",
+    "object_repr": "Alerte fuite - Compteur C001",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2026-08-30T02:12:21.471Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "9",
+    "object_repr": "Alerte vanne_fermee - Compteur C001",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2026-08-30T02:13:13.809Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "10",
+    "object_repr": "Alerte fuite - Compteur C001",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2026-08-31T04:49:27.985Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "11",
+    "object_repr": "Alerte vanne_fermee - Compteur C001",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2026-08-31T04:49:41.365Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "10",
+    "object_repr": "Alerte fuite - Compteur C001",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2026-08-31T04:50:39.700Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "12",
+    "object_repr": "Alerte fuite - Compteur C001",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2026-08-31T04:51:54.811Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "13",
+    "object_repr": "Alerte vanne_fermee - Compteur C001",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2026-08-31T04:52:00.388Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "12",
+    "object_repr": "Alerte fuite - Compteur C001",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2026-08-31T04:52:14.023Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "14",
+    "object_repr": "Alerte fuite - Compteur C001",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2026-08-31T05:18:28.222Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "15",
+    "object_repr": "Alerte vanne_fermee - Compteur C001",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2026-08-31T05:18:34.789Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "14",
+    "object_repr": "Alerte fuite - Compteur C001",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2026-08-31T05:18:53.125Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "16",
+    "object_repr": "Alerte fuite - Compteur C001",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2026-08-31T05:26:56.842Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "17",
+    "object_repr": "Alerte vanne_fermee - Compteur C001",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2026-08-31T05:27:02.992Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "16",
+    "object_repr": "Alerte fuite - Compteur C001",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2026-08-31T05:27:13.517Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "18",
+    "object_repr": "Alerte fuite - Compteur C001",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2026-08-31T05:36:18.816Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "4",
+    "object_repr": "Avis fati (client) - 4 étoiles",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2026-08-31T05:39:07.174Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "18",
+    "object_repr": "Alerte fuite - Compteur C001",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2026-08-31T05:39:26.808Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "19",
+    "object_repr": "Alerte fuite - Compteur C001",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2026-08-31T05:57:13.653Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "19",
+    "object_repr": "Alerte fuite - Compteur C001",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2026-08-31T05:57:24.737Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "20",
+    "object_repr": "Alerte fuite - Compteur C001",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 91,
+  "fields": {
+    "action_time": "2026-08-31T05:59:54.520Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "20",
+    "object_repr": "Alerte fuite - Compteur C001",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 92,
+  "fields": {
+    "action_time": "2026-08-31T06:00:05.110Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "22",
+    "object_repr": "Alerte vanne_fermee - Compteur C001",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 93,
+  "fields": {
+    "action_time": "2026-08-31T06:00:10.161Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "21",
+    "object_repr": "Alerte vanne_fermee - Compteur C001",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 94,
+  "fields": {
+    "action_time": "2026-08-31T06:00:19.681Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "23",
+    "object_repr": "Alerte fuite - Compteur C001",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 95,
+  "fields": {
+    "action_time": "2026-08-31T06:01:56.796Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "23",
+    "object_repr": "Alerte fuite - Compteur C001",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 96,
+  "fields": {
+    "action_time": "2026-08-31T06:02:02.902Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "24",
+    "object_repr": "Alerte vanne_fermee - Compteur C001",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 97,
+  "fields": {
+    "action_time": "2026-08-31T06:02:14.096Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "25",
+    "object_repr": "Alerte fuite - Compteur C001",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 98,
+  "fields": {
+    "action_time": "2026-08-31T06:03:02.860Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "26",
+    "object_repr": "Alerte vanne_fermee - Compteur C001",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 99,
+  "fields": {
+    "action_time": "2026-08-31T06:03:08.992Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "25",
+    "object_repr": "Alerte fuite - Compteur C001",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "2bvuuzo2i0fpgq82wikpfx5577xintwf",
+  "fields": {
+    "session_data": ".eJxVjEEOgjAQRe_StWkYBkrr0j1nIDPT1qKmTSisjHcXEha6fe_9_1YTbWuathqWafbqqkBdfhmTPEM-hH9QvhctJa_LzPpI9GmrHosPr9vZ_h0kqmlfIwMDMPsO2VrpIhgTGxRwyD2gmEFaR2IJGaEfKELbOCs7NL0xxOrzBd0MN4w:1x065T:ORoq9M6XY3sGAN6GZVFXMa-fpfbX7ksJt9WdEb-B7fI",
+    "expire_date": "2026-09-11T23:34:19.081Z"
+  }
+},
+{
   "model": "sessions.session",
   "pk": "drj6hmtcl917k84z20lds78fdpx9cj0j",
   "fields": {
@@ -233,18 +1307,17 @@
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$600000$Lzo5LBUP8UX0MHUUlgXc3a$Yvo3f2zbl+ffJpm7+Qdg2ZL9qSKo5NTh1xguq/HICFw=",
-    "last_login": "2026-08-01T20:34:35.284Z",
+    "last_login": "2026-08-22T05:18:00Z",
     "is_superuser": true,
     "username": "famalia",
     "first_name": "Fatimata",
     "last_name": "Djigo",
-    "email": "fatimatu9523@gmail.com",
     "is_staff": true,
     "is_active": true,
     "date_joined": "2026-07-19T21:20:11Z",
     "role": "super_admin",
-    "zone": "",
-    "telephone": "",
+    "zone": null,
+    "telephone": null,
     "adresse": "",
     "latitude": null,
     "longitude": null,
@@ -255,6 +1328,7 @@
     "doc_attestation": false,
     "doc_contrat_location": false,
     "doc_convention": false,
+    "email": "fatima9523@gmail.com",
     "groups": [],
     "user_permissions": []
   }
@@ -263,29 +1337,29 @@
   "model": "utilisateurs.utilisateur",
   "pk": 2,
   "fields": {
-    "password": "pbkdf2_sha256$600000$z9yB019DFZwlLUU7iukEts$ECbcq0nqHbAVmCaXqod8SQ2koTFF1yd090aYqoSuuNg=",
+    "password": "pbkdf2_sha256$600000$CbAG1bUAnyBTjqW2UODdtx$vLgtm2hTBEQWVmTwK+P6Zn5sQVwhvFx3OSMcThMFxfM=",
     "last_login": null,
     "is_superuser": false,
-    "username": "client1",
-    "first_name": "Aminat",
+    "username": "aminata",
+    "first_name": "Aminata",
     "last_name": "Diallo",
-    "email": "client1@gmail.com",
     "is_staff": false,
     "is_active": true,
-    "date_joined": "2026-07-19T22:34:59.179Z",
+    "date_joined": "2026-07-19T22:34:59Z",
     "role": "client",
     "zone": "Dakar 1",
     "telephone": "77 123 45 65",
-    "adresse": "Dakar Plateau",
+    "adresse": "Fann",
     "latitude": 14.6937,
     "longitude": -17.4441,
-    "photo": "https://res.cloudinary.com/av7ptll6/image/upload/v1786818573/users/client1.png",
+    "photo": "media/photos/utilisateurs/aminata/Gold_Photo_Collage_Fashion_Sale_Announcement_Poster_ubw6nz",
     "type_client": "proprietaire",
     "statut_abonnement": "actif",
     "doc_cin": false,
     "doc_attestation": false,
     "doc_contrat_location": false,
     "doc_convention": false,
+    "email": "client1@gmail.com",
     "groups": [],
     "user_permissions": []
   }
@@ -294,16 +1368,15 @@
   "model": "utilisateurs.utilisateur",
   "pk": 3,
   "fields": {
-    "password": "pbkdf2_sha256$600000$AaYtJyARL0qYoi2ouDso2P$R+j5mokHR2g/8dNpHJy/a/3kv1yCZ+jJ3pvlSGmU/Ok=",
+    "password": "pbkdf2_sha256$600000$9jVPWyceE4C5Ss6JX1IzD4$m1Ux2mt3mN7tWdnIlpOMNhpSLI3Q4N6WYbtmqZRfT5k=",
     "last_login": null,
     "is_superuser": true,
     "username": "fati",
     "first_name": "astou",
     "last_name": "sy",
-    "email": "faa@gmail.com",
     "is_staff": true,
     "is_active": true,
-    "date_joined": "2026-07-26T21:59:35.001Z",
+    "date_joined": "2026-07-26T21:59:35Z",
     "role": "client",
     "zone": "Dakar 1",
     "telephone": null,
@@ -317,6 +1390,7 @@
     "doc_attestation": false,
     "doc_contrat_location": false,
     "doc_convention": false,
+    "email": "fatimatu9523@gmail.com",
     "groups": [],
     "user_permissions": []
   }
@@ -331,7 +1405,6 @@
     "username": "mai",
     "first_name": "mariam",
     "last_name": "sy",
-    "email": "faa@gmail.com",
     "is_staff": false,
     "is_active": true,
     "date_joined": "2026-08-01T20:40:13Z",
@@ -348,6 +1421,7 @@
     "doc_attestation": false,
     "doc_contrat_location": false,
     "doc_convention": false,
+    "email": "mai@gmail.com",
     "groups": [],
     "user_permissions": []
   }
@@ -362,7 +1436,6 @@
     "username": "des",
     "first_name": "r",
     "last_name": "f",
-    "email": "w523@gmail.com",
     "is_staff": false,
     "is_active": true,
     "date_joined": "2026-08-01T20:49:13.445Z",
@@ -372,13 +1445,14 @@
     "adresse": null,
     "latitude": null,
     "longitude": null,
-    "photo": "https://res.cloudinary.com/av7ptll6/image/upload/v1786818592/users/des.png",
-    "type_client": null,
+    "photo": "media/photos/utilisateurs/des/Gold_Photo_Collage_Fashion_Sale_Announcement_Poster_qdjobv",
+    "type_client": "proprietaire",
     "statut_abonnement": "actif",
     "doc_cin": false,
     "doc_attestation": false,
     "doc_contrat_location": false,
     "doc_convention": false,
+    "email": "w523@gmail.com",
     "groups": [],
     "user_permissions": []
   }
@@ -393,7 +1467,6 @@
     "username": "se",
     "first_name": "f",
     "last_name": "s",
-    "email": "fa523@gmail.com",
     "is_staff": false,
     "is_active": true,
     "date_joined": "2026-08-01T22:37:24.291Z",
@@ -410,6 +1483,7 @@
     "doc_attestation": false,
     "doc_contrat_location": false,
     "doc_convention": false,
+    "email": "fa523@gmail.com",
     "groups": [],
     "user_permissions": []
   }
@@ -424,7 +1498,6 @@
     "username": "ab",
     "first_name": "Abasse",
     "last_name": "Djigo",
-    "email": "basse523@gmail.com",
     "is_staff": false,
     "is_active": true,
     "date_joined": "2026-08-02T01:13:45.866Z",
@@ -434,13 +1507,14 @@
     "adresse": null,
     "latitude": null,
     "longitude": null,
-    "photo": "https://res.cloudinary.com/av7ptll6/image/upload/v1786818589/users/ab.jpg",
+    "photo": "media/photos/utilisateurs/ab/WhatsApp_Image_2026-07-08_at_15.30.15_imoqnb",
     "type_client": null,
     "statut_abonnement": "actif",
     "doc_cin": false,
     "doc_attestation": false,
     "doc_contrat_location": false,
     "doc_convention": false,
+    "email": "basse523@gmail.com",
     "groups": [],
     "user_permissions": []
   }
@@ -455,7 +1529,6 @@
     "username": "dev",
     "first_name": "david",
     "last_name": "diop",
-    "email": "dev23@gmail.com",
     "is_staff": false,
     "is_active": true,
     "date_joined": "2026-08-02T19:36:20.110Z",
@@ -472,6 +1545,7 @@
     "doc_attestation": false,
     "doc_contrat_location": false,
     "doc_convention": false,
+    "email": "dev23@gmail.com",
     "groups": [],
     "user_permissions": []
   }
@@ -486,7 +1560,6 @@
     "username": "moussa.diallo",
     "first_name": "Moussa",
     "last_name": "Diallo",
-    "email": "moussa@gmail.com",
     "is_staff": false,
     "is_active": true,
     "date_joined": "2026-08-12T23:03:45.884Z",
@@ -503,6 +1576,7 @@
     "doc_attestation": false,
     "doc_contrat_location": false,
     "doc_convention": false,
+    "email": "moussa@gmail.com",
     "groups": [],
     "user_permissions": []
   }
@@ -511,20 +1585,50 @@
   "model": "utilisateurs.utilisateur",
   "pk": 14,
   "fields": {
-    "password": "pbkdf2_sha256$600000$2v73k19wzsoROf54gq5Z41$w0NuMRLthevq5vjngAYM3+zw0XAR2RaGgNeogDXV+eo=",
+    "password": "pbkdf2_sha256$600000$qnMB9y7M5l8OLQ7CDvpQyq$daoqXTTmlvjePGMmhkm693ax5/7ynuWQ+UHqnEKQ1R8=",
     "last_login": null,
     "is_superuser": false,
     "username": "maria.ba",
     "first_name": "Maria",
     "last_name": "Ba",
-    "email": "fatimatu9523@gmail.com",
     "is_staff": false,
     "is_active": true,
-    "date_joined": "2026-08-13T20:31:29.288Z",
+    "date_joined": "2026-08-13T20:31:29Z",
     "role": "client",
     "zone": "Dakar 1",
     "telephone": "77 912 63 92",
     "adresse": "Patte d'oie",
+    "latitude": null,
+    "longitude": null,
+    "photo": "",
+    "type_client": "proprietaire",
+    "statut_abonnement": "actif",
+    "doc_cin": true,
+    "doc_attestation": false,
+    "doc_contrat_location": false,
+    "doc_convention": false,
+    "email": "fatimau9523@gmail.com",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "utilisateurs.utilisateur",
+  "pk": 16,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$2Mx5mnWAf8fCo34QvbNawe$Xhea//OXXi7N7CVSjdc4q0i6B9snJbU8WEOX5u3M3d8=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "adama.sy",
+    "first_name": "Adama",
+    "last_name": "Sy",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-08-24T00:00:32.903Z",
+    "role": "client",
+    "zone": "Rufisque",
+    "telephone": "775842369",
+    "adresse": "Rufisque est",
     "latitude": null,
     "longitude": null,
     "photo": "",
@@ -534,6 +1638,7 @@
     "doc_attestation": false,
     "doc_contrat_location": false,
     "doc_convention": false,
+    "email": "adams56@gmail.com",
     "groups": [],
     "user_permissions": []
   }
@@ -547,7 +1652,8 @@
     "statut": "attribue",
     "etat_vanne": "ouverte",
     "client": 2,
-    "date_installation": "2026-07-22T00:56:05.459Z"
+    "date_installation": "2026-07-22T00:56:05.459Z",
+    "ferme_par": null
   }
 },
 {
@@ -559,7 +1665,8 @@
     "statut": "attribue",
     "etat_vanne": "ouverte",
     "client": 3,
-    "date_installation": "2026-08-02T01:37:32.020Z"
+    "date_installation": "2026-08-02T01:37:32.020Z",
+    "ferme_par": null
   }
 },
 {
@@ -568,10 +1675,11 @@
   "fields": {
     "numero_compteur": "C003",
     "serie": "SN-2026-03",
-    "statut": "disponible",
+    "statut": "attribue",
     "etat_vanne": "ouverte",
-    "client": null,
-    "date_installation": "2026-08-02T02:32:16.808Z"
+    "client": 14,
+    "date_installation": "2026-08-02T02:32:16.808Z",
+    "ferme_par": null
   }
 },
 {
@@ -580,10 +1688,11 @@
   "fields": {
     "numero_compteur": "C004",
     "serie": "Sn-2025-007",
-    "statut": "attribue",
+    "statut": "disponible",
     "etat_vanne": "ouverte",
     "client": null,
-    "date_installation": "2026-08-02T02:37:38.785Z"
+    "date_installation": "2026-08-02T02:37:38.785Z",
+    "ferme_par": null
   }
 },
 {
@@ -602,6 +1711,24 @@
     "compteur": 1,
     "volume": 150.0,
     "date_heure": "2026-08-04T20:32:03.893Z"
+  }
+},
+{
+  "model": "consommation.consommation",
+  "pk": 5,
+  "fields": {
+    "compteur": 3,
+    "volume": 45.0,
+    "date_heure": "2026-08-25T01:43:49.393Z"
+  }
+},
+{
+  "model": "consommation.consommation",
+  "pk": 6,
+  "fields": {
+    "compteur": 2,
+    "volume": 150.0,
+    "date_heure": "2026-08-25T06:14:29.503Z"
   }
 },
 {
@@ -629,6 +1756,15 @@
     "compteur": 1,
     "valeur_index": 0.20099999999999998,
     "date_releve": "2026-08-04T20:32:03.937Z"
+  }
+},
+{
+  "model": "consommation.index",
+  "pk": 4,
+  "fields": {
+    "compteur": 2,
+    "valeur_index": 0.15,
+    "date_releve": "2026-08-25T06:14:29.513Z"
   }
 },
 {
@@ -681,12 +1817,44 @@
     "tarif": 1,
     "volume_total": 175.5,
     "montant": 35.45,
-    "statut": "en_attente",
-    "mode_paiement": null,
+    "statut": "payee",
+    "mode_paiement": "wave",
     "date_generation": "2026-08-14T00:48:47.226Z",
     "date_limite": "2026-10-13",
     "periode_debut": "2026-06-15",
     "periode_fin": "2026-08-14"
+  }
+},
+{
+  "model": "factures.facture",
+  "pk": 12,
+  "fields": {
+    "client": 14,
+    "tarif": 1,
+    "volume_total": 45.0,
+    "montant": 9.09,
+    "statut": "en_attente",
+    "mode_paiement": null,
+    "date_generation": "2026-08-25T06:05:25.396Z",
+    "date_limite": "2026-10-24",
+    "periode_debut": "2026-06-26",
+    "periode_fin": "2026-08-25"
+  }
+},
+{
+  "model": "factures.facture",
+  "pk": 17,
+  "fields": {
+    "client": 3,
+    "tarif": 1,
+    "volume_total": 150.0,
+    "montant": 30.3,
+    "statut": "payee",
+    "mode_paiement": "orange_money",
+    "date_generation": "2026-08-25T06:47:26.955Z",
+    "date_limite": "2026-10-24",
+    "periode_debut": "2026-06-26",
+    "periode_fin": "2026-08-25"
   }
 },
 {
@@ -698,6 +1866,28 @@
     "statut": "resolue",
     "date": "2026-08-04T20:32:03.943Z",
     "date_resolution": "2026-08-04T22:53:16.330Z"
+  }
+},
+{
+  "model": "alertes.alerte",
+  "pk": 2,
+  "fields": {
+    "compteur": 2,
+    "type_alerte": "surconsommation",
+    "statut": "resolue",
+    "date": "2026-08-25T06:14:29.519Z",
+    "date_resolution": "2026-08-25T06:16:27.692Z"
+  }
+},
+{
+  "model": "alertes.alerte",
+  "pk": 3,
+  "fields": {
+    "compteur": 1,
+    "type_alerte": "fuite",
+    "statut": "resolue",
+    "date": "2026-08-29T00:54:18.201Z",
+    "date_resolution": "2026-08-29T00:55:27.393Z"
   }
 },
 {
@@ -723,6 +1913,193 @@
   }
 },
 {
+  "model": "alertes.commande",
+  "pk": 3,
+  "fields": {
+    "compteur": 1,
+    "action": "fermer",
+    "statut": "envoyee",
+    "effectuee_par": 1,
+    "date_commande": "2026-08-30T01:35:24.428Z"
+  }
+},
+{
+  "model": "alertes.commande",
+  "pk": 4,
+  "fields": {
+    "compteur": 1,
+    "action": "ouvrir",
+    "statut": "envoyee",
+    "effectuee_par": 1,
+    "date_commande": "2026-08-30T01:35:34.126Z"
+  }
+},
+{
+  "model": "alertes.commande",
+  "pk": 5,
+  "fields": {
+    "compteur": 1,
+    "action": "fermer",
+    "statut": "envoyee",
+    "effectuee_par": 2,
+    "date_commande": "2026-08-30T01:49:22.635Z"
+  }
+},
+{
+  "model": "alertes.commande",
+  "pk": 6,
+  "fields": {
+    "compteur": 1,
+    "action": "ouvrir",
+    "statut": "envoyee",
+    "effectuee_par": 1,
+    "date_commande": "2026-08-30T02:06:37.376Z"
+  }
+},
+{
+  "model": "alertes.commande",
+  "pk": 7,
+  "fields": {
+    "compteur": 1,
+    "action": "fermer",
+    "statut": "envoyee",
+    "effectuee_par": 2,
+    "date_commande": "2026-08-30T02:07:18.587Z"
+  }
+},
+{
+  "model": "alertes.commande",
+  "pk": 8,
+  "fields": {
+    "compteur": 1,
+    "action": "ouvrir",
+    "statut": "envoyee",
+    "effectuee_par": 1,
+    "date_commande": "2026-08-30T02:14:46.536Z"
+  }
+},
+{
+  "model": "alertes.commande",
+  "pk": 9,
+  "fields": {
+    "compteur": 1,
+    "action": "fermer",
+    "statut": "envoyee",
+    "effectuee_par": 2,
+    "date_commande": "2026-08-30T02:14:53.765Z"
+  }
+},
+{
+  "model": "alertes.commande",
+  "pk": 10,
+  "fields": {
+    "compteur": 1,
+    "action": "ouvrir",
+    "statut": "envoyee",
+    "effectuee_par": 1,
+    "date_commande": "2026-08-31T04:50:06.046Z"
+  }
+},
+{
+  "model": "alertes.commande",
+  "pk": 11,
+  "fields": {
+    "compteur": 1,
+    "action": "fermer",
+    "statut": "envoyee",
+    "effectuee_par": 2,
+    "date_commande": "2026-08-31T04:50:55.001Z"
+  }
+},
+{
+  "model": "alertes.commande",
+  "pk": 12,
+  "fields": {
+    "compteur": 1,
+    "action": "fermer",
+    "statut": "envoyee",
+    "effectuee_par": 2,
+    "date_commande": "2026-08-31T04:52:38.933Z"
+  }
+},
+{
+  "model": "alertes.commande",
+  "pk": 13,
+  "fields": {
+    "compteur": 1,
+    "action": "fermer",
+    "statut": "envoyee",
+    "effectuee_par": 2,
+    "date_commande": "2026-08-31T05:21:30.958Z"
+  }
+},
+{
+  "model": "alertes.commande",
+  "pk": 14,
+  "fields": {
+    "compteur": 1,
+    "action": "fermer",
+    "statut": "envoyee",
+    "effectuee_par": 1,
+    "date_commande": "2026-08-31T05:40:38.877Z"
+  }
+},
+{
+  "model": "alertes.commande",
+  "pk": 15,
+  "fields": {
+    "compteur": 1,
+    "action": "ouvrir",
+    "statut": "envoyee",
+    "effectuee_par": 1,
+    "date_commande": "2026-08-31T05:49:15.768Z"
+  }
+},
+{
+  "model": "alertes.commande",
+  "pk": 16,
+  "fields": {
+    "compteur": 1,
+    "action": "fermer",
+    "statut": "envoyee",
+    "effectuee_par": 2,
+    "date_commande": "2026-08-31T05:57:54.362Z"
+  }
+},
+{
+  "model": "alertes.commande",
+  "pk": 17,
+  "fields": {
+    "compteur": 1,
+    "action": "fermer",
+    "statut": "envoyee",
+    "effectuee_par": 2,
+    "date_commande": "2026-08-31T05:58:10.105Z"
+  }
+},
+{
+  "model": "alertes.commande",
+  "pk": 18,
+  "fields": {
+    "compteur": 1,
+    "action": "fermer",
+    "statut": "envoyee",
+    "effectuee_par": 2,
+    "date_commande": "2026-08-31T06:00:42.071Z"
+  }
+},
+{
+  "model": "alertes.commande",
+  "pk": 19,
+  "fields": {
+    "compteur": 1,
+    "action": "fermer",
+    "statut": "envoyee",
+    "effectuee_par": 2,
+    "date_commande": "2026-08-31T06:02:20.889Z"
+  }
+},
+{
   "model": "avis.avis",
   "pk": 1,
   "fields": {
@@ -743,9 +2120,35 @@
     "note": 2,
     "commentaire": "Pas mal,votre service",
     "date_avis": "2026-08-04T22:48:46.701Z",
-    "statut": "en_attente",
-    "reponse_admin": "",
-    "date_reponse": null
+    "statut": "traite",
+    "reponse_admin": "m",
+    "date_reponse": "2026-08-27T06:09:58.804Z"
+  }
+},
+{
+  "model": "avis.avis",
+  "pk": 3,
+  "fields": {
+    "client": 2,
+    "note": 4,
+    "commentaire": "Bien",
+    "date_avis": "2026-08-26T22:44:39.712Z",
+    "statut": "traite",
+    "reponse_admin": "merci amina",
+    "date_reponse": "2026-08-26T22:45:30.392Z"
+  }
+},
+{
+  "model": "avis.avis",
+  "pk": 5,
+  "fields": {
+    "client": 2,
+    "note": 5,
+    "commentaire": "Tres bon service",
+    "date_avis": "2026-08-31T06:45:27.779Z",
+    "statut": "traite",
+    "reponse_admin": "mrc",
+    "date_reponse": "2026-08-31T06:46:51.430Z"
   }
 },
 {
@@ -841,6 +2244,30 @@
     "motif_refus": null,
     "date_demande": "2026-08-13T20:13:37.234Z",
     "date_traitement": "2026-08-13T20:31:33.601Z",
+    "traite_par": 1
+  }
+},
+{
+  "model": "demandes.demandeabonnement",
+  "pk": 6,
+  "fields": {
+    "nom": "Sy",
+    "prenom": "Adama",
+    "email": "fatimatu9523@gmail.com",
+    "telephone": "775842369",
+    "adresse": "Rufisque est",
+    "zone": "Rufisque",
+    "latitude": null,
+    "longitude": null,
+    "type_client": "proprietaire",
+    "photo_cin": "media/demandes/cin/Appel_20Candidatures_Master_Info_2026-2027_m2gjdz",
+    "photo_attestation": "",
+    "photo_contrat": "",
+    "photo_convention": "",
+    "statut": "acceptee",
+    "motif_refus": null,
+    "date_demande": "2026-08-23T23:57:44.919Z",
+    "date_traitement": "2026-08-24T00:00:43.423Z",
     "traite_par": 1
   }
 }
