@@ -1,7 +1,4 @@
 from django.shortcuts import render
-
-# Create your views here.
-
 from rest_framework import generics, status
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -12,6 +9,7 @@ from .models import DemandeAbonnement
 from .serializers import DemandeSerializer
 from .email_utils import envoyer_email_bienvenue
 
+
 class ListeDemandesView(generics.ListAPIView):
     permission_classes = [IsAuthenticated]
     serializer_class = DemandeSerializer
@@ -20,7 +18,6 @@ class ListeDemandesView(generics.ListAPIView):
         user = self.request.user
         if user.role == 'super_admin':
             return DemandeAbonnement.objects.all()
-        # Admin zone voit les demandes de sa zone
         return DemandeAbonnement.objects.filter(zone=user.zone)
 
     def get_serializer_context(self):
@@ -28,12 +25,33 @@ class ListeDemandesView(generics.ListAPIView):
         context['request'] = self.request
         return context
 
+
 class CreerDemandeView(APIView):
-    # AllowAny car le client n'est pas encore inscrit
     permission_classes = [AllowAny]
     parser_classes = [MultiPartParser, FormParser]
 
     def post(self, request):
+        from utilisateurs.models import Utilisateur
+
+        email = request.data.get('email', '')
+
+        # Vérifier si email déjà utilisé
+        if Utilisateur.objects.filter(email=email, role='client').exists():
+            return Response(
+                {'erreur': 'Un compte avec cet email existe déjà. Connectez-vous directement.'},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        # Vérifier si demande déjà en attente
+        if DemandeAbonnement.objects.filter(
+            email=email,
+            statut='en_attente'
+        ).exists():
+            return Response(
+                {'erreur': 'Une demande avec cet email est déjà en cours de traitement.'},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
         serializer = DemandeSerializer(
             data=request.data,
             context={'request': request}
@@ -48,6 +66,7 @@ class CreerDemandeView(APIView):
             serializer.errors,
             status=status.HTTP_400_BAD_REQUEST
         )
+
 
 class TraiterDemandeView(APIView):
     permission_classes = [IsAuthenticated]
@@ -77,7 +96,6 @@ class TraiterDemandeView(APIView):
                 demande.date_traitement = timezone.now()
                 demande.traite_par = request.user
                 demande.save()
-
                 return Response({
                     'message': 'Demande refusée avec succès'
                 })
@@ -86,27 +104,24 @@ class TraiterDemandeView(APIView):
             if action == 'accepter_manuel':
                 from utilisateurs.models import Utilisateur
 
-                # Récupérer le mot de passe temporaire
                 password_temp = request.data.get('password_temporaire', '')
 
                 try:
-                    # Chercher le client créé avec cet email
                     client = Utilisateur.objects.filter(
                         email=demande.email,
                         role='client'
-                    ).last()  # ← prendre le plus récent
+                    ).last()
 
-                    # Envoyer email si client trouvé et mot de passe fourni
                     if client and password_temp:
                         envoyer_email_bienvenue(client, password_temp)
                         print(f"Email envoyé à {client.email}")
                     else:
                         print(f"Client non trouvé ou mot de passe manquant")
+                        print(f"client={client}, password_temp={password_temp}")
 
                 except Exception as e:
-                   print(f"Erreur email: {e}")
+                    print(f"Erreur email: {e}")
 
-                # Marquer demande comme acceptée
                 demande.statut = 'acceptee'
                 demande.date_traitement = timezone.now()
                 demande.traite_par = request.user
@@ -115,8 +130,8 @@ class TraiterDemandeView(APIView):
                 return Response({
                     'message': 'Demande marquée comme acceptée'
                 })
-                    # ===== ACCEPTER AUTOMATIQUE =====
-            # (création automatique du compte)
+
+            # ===== ACCEPTER AUTOMATIQUE =====
             if action == 'accepter':
                 from utilisateurs.models import Utilisateur
                 import random
@@ -173,7 +188,7 @@ class TraiterDemandeView(APIView):
                 email_envoye = envoyer_email_bienvenue(client, password)
 
                 return Response({
-                    'message': f'Demande acceptée ! Compte créé avec succès.',
+                    'message': 'Demande acceptée ! Compte créé avec succès.',
                     'email_envoye': email_envoye,
                     'client': {
                         'id': client.id,
@@ -193,4 +208,3 @@ class TraiterDemandeView(APIView):
                 {'erreur': f'Erreur serveur : {str(e)}'},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
-            

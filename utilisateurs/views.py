@@ -48,8 +48,13 @@ class ConnexionView(APIView):
                 'zone': utilisateur.zone,
                 'email': utilisateur.email,
                 'telephone': utilisateur.telephone,
-                'photo_url': photo_url,  # ← photo incluse
-            })
+                'adresse': utilisateur.adresse, 
+                'photo_url': photo_url,  
+                'first_name': utilisateur.first_name,         
+    'last_name': utilisateur.last_name,            
+    'statut_abonnement': utilisateur.statut_abonnement, 
+})
+        
 
         return Response(
             {'erreur': 'Identifiants incorrects'},
@@ -199,21 +204,43 @@ class ModifierPhotoView(APIView):
                 status=status.HTTP_400_BAD_REQUEST
             )
 
-        # Supprimer ancienne photo
-        if request.user.photo:
-            import os
-            if os.path.exists(request.user.photo.path):
-                os.remove(request.user.photo.path)
+        try:
+            # Supprimer ancienne photo sur Cloudinary si elle existe
+            if request.user.photo:
+                try:
+                    import cloudinary.uploader
+                    # Extraire le public_id depuis l'URL
+                    photo_str = str(request.user.photo)
+                    if 'cloudinary' in photo_str:
+                        # Supprimer l'ancienne photo
+                        public_id = photo_str.split('/')[-1].split('.')[0]
+                        cloudinary.uploader.destroy(f"photos/{public_id}")
+                except Exception as e:
+                    print(f"Erreur suppression ancienne photo: {e}")
 
-        request.user.photo = photo
-        request.user.save()
+            # Sauvegarder nouvelle photo
+            request.user.photo = photo
+            request.user.save()
 
-        photo_url = request.build_absolute_uri(request.user.photo.url)
+            # Retourner l'URL de la photo
+            photo_url = None
+            if request.user.photo:
+                try:
+                    photo_url = request.user.photo.url
+                except Exception:
+                    photo_url = str(request.user.photo)
 
-        return Response({
-            'message': 'Photo mise à jour avec succès',
-            'photo_url': photo_url
-        })
+            return Response({
+                'message': 'Photo mise à jour avec succès',
+                'photo_url': photo_url
+            })
+
+        except Exception as e:
+            print(f"Erreur modification photo: {e}")
+            return Response(
+                {'erreur': str(e)},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
 
 class ChangerMotDePasseView(APIView):
     permission_classes = [IsAuthenticated]

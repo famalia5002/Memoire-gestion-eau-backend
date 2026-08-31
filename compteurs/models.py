@@ -35,6 +35,12 @@ class Compteur(models.Model):
         related_name='compteurs'
     )
     date_installation = models.DateTimeField(auto_now_add=True)
+    ferme_par = models.CharField(
+        max_length=20,
+        choices=[('admin', 'Admin'), ('client', 'Client'), ('systeme', 'Système')],
+        null=True,
+        blank=True
+    )
 
     def __str__(self):
         return f"Compteur {self.numero_compteur}"

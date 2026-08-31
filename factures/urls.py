@@ -8,4 +8,8 @@ urlpatterns = [
     path('tarifs/', views.TarifView.as_view(), name='tarifs'),
     path('generer/', views.GenererFactureView.as_view(), name='generer_facture'),
     path('generer-toutes/', views.GenererToutesFacturesView.as_view(), name='generer_toutes'),
+    path('<int:facture_id>/detail/', views.FacturePDFView.as_view(), name='facture_detail'),
+    path('<int:facture_id>/envoyer-pdf/', views.EnvoyerPDFView.as_view(), name='envoyer_pdf'),
+
+
 ]

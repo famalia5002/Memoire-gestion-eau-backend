@@ -72,6 +72,7 @@ class Utilisateur(AbstractUser):
     doc_attestation = models.BooleanField(default=False)
     doc_contrat_location = models.BooleanField(default=False)
     doc_convention = models.BooleanField(default=False)
+    email = models.EmailField(unique=True)
 
     def __str__(self):
         return f"{self.username} ({self.role})"

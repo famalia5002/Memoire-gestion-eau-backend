@@ -3,31 +3,73 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.permissions import IsAuthenticated
 from django.utils import timezone
+from django.conf import settings
 from datetime import timedelta
 from .models import Facture, Tarif
 from .serializers import FactureSerializer, TarifSerializer
+import base64
+from django.core.mail import EmailMessage
+from django.core import mail
 
-# Zones assainies
 ZONES_ASSAINIES = ['Dakar 1', 'Dakar 2', 'Thiès', 'Rufisque', 'Mbour']
 
 def calculer_montant(volume_m3, tarif):
-    """
-    Calcule le montant selon les tranches SEN'EAU
-    Facturation bimestrielle
-    """
     montant = 0
-
     if volume_m3 <= 20:
         montant = volume_m3 * tarif.prix_ts
     elif volume_m3 <= 40:
-        montant = (20 * tarif.prix_ts) + \
-                  ((volume_m3 - 20) * tarif.prix_tp)
+        montant = (20 * tarif.prix_ts) + ((volume_m3 - 20) * tarif.prix_tp)
     else:
-        montant = (20 * tarif.prix_ts) + \
-                  (20 * tarif.prix_tp) + \
-                  ((volume_m3 - 40) * tarif.prix_td)
-
+        montant = (20 * tarif.prix_ts) + (20 * tarif.prix_tp) + ((volume_m3 - 40) * tarif.prix_td)
     return round(montant, 2)
+
+
+def envoyer_email_facture(client, facture):
+    """Envoie un email au client quand une facture est générée"""
+    try:
+        from django.core.mail import send_mail
+
+        sujet = f"Smart Ndiyam - Nouvelle facture #{facture.id}"
+
+        message = f"""
+Bonjour {client.first_name} {client.last_name},
+
+Une nouvelle facture a été générée pour votre compte.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DÉTAILS DE LA FACTURE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Numéro      : #{facture.id}
+Période     : {facture.periode_debut} - {facture.periode_fin}
+Volume      : {facture.volume_total} L
+Montant     : {facture.montant} FCFA
+Date limite : {facture.date_limite}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Connectez-vous sur l'application Smart Ndiyam 
+pour consulter et payer votre facture.
+
+Modes de paiement acceptés :
+- Wave
+- Orange Money  
+- Agence SEN'EAU
+
+Smart Ndiyam - Système Intelligent de Gestion d'Eau IoT
+        """
+
+        send_mail(
+            subject=sujet,
+            message=message,
+            from_email=settings.DEFAULT_FROM_EMAIL,
+            recipient_list=[client.email],
+            fail_silently=True,
+        )
+        print(f"Email facture envoyé à {client.email}")
+        return True
+
+    except Exception as e:
+        print(f"Erreur email facture: {e}")
+        return False
 
 
 class ListeFacturesView(generics.ListAPIView):
@@ -39,9 +81,7 @@ class ListeFacturesView(generics.ListAPIView):
         if user.role == 'client':
             return Facture.objects.filter(client=user)
         elif user.role == 'admin_zone':
-            return Facture.objects.filter(
-                client__zone=user.zone
-            )
+            return Facture.objects.filter(client__zone=user.zone)
         return Facture.objects.all()
 
     def get_serializer_context(self):
@@ -116,20 +156,15 @@ class GenererFactureView(APIView):
         client_id = request.data.get('client_id')
 
         try:
-            client = Utilisateur.objects.get(
-                id=client_id, role='client'
-            )
+            client = Utilisateur.objects.get(id=client_id, role='client')
         except Utilisateur.DoesNotExist:
             return Response(
                 {'erreur': 'Client non trouvé'},
                 status=status.HTTP_404_NOT_FOUND
             )
 
-        # Déterminer type de zone
-        type_zone = 'assainie' if client.zone in ZONES_ASSAINIES \
-            else 'non_assainie'
-
-        # Récupérer tarif selon zone
+        # Tarif selon zone
+        type_zone = 'assainie' if client.zone in ZONES_ASSAINIES else 'non_assainie'
         tarif = Tarif.objects.filter(
             type_zone=type_zone,
             type_abonne='domestique_15mm',
@@ -142,11 +177,11 @@ class GenererFactureView(APIView):
 
         if not tarif:
             return Response(
-                {'erreur': 'Aucun tarif défini. Créez un tarif d\'abord.'},
+                {'erreur': 'Aucun tarif défini'},
                 status=status.HTTP_400_BAD_REQUEST
             )
 
-        # Période bimestrielle (2 mois)
+        # Période bimestrielle
         fin = timezone.now()
         debut = fin - timedelta(days=60)
 
@@ -178,10 +213,9 @@ class GenererFactureView(APIView):
                 status=status.HTTP_400_BAD_REQUEST
             )
 
-        # Calculer montant avec tranches
         montant = calculer_montant(volume_m3, tarif)
 
-        # Créer facture
+        # Créer la facture
         facture = Facture.objects.create(
             client=client,
             tarif=tarif,
@@ -193,10 +227,9 @@ class GenererFactureView(APIView):
             periode_fin=fin.date()
         )
 
-        serializer = FactureSerializer(
-            facture,
-            context={'request': request}
-        )
+      
+
+        serializer = FactureSerializer(facture, context={'request': request})
         return Response({
             'message': f'Facture générée pour {client.nom_complet}',
             'facture': serializer.data,
@@ -236,10 +269,7 @@ class GenererToutesFacturesView(APIView):
         erreurs = []
 
         for client in clients:
-            # Tarif selon zone
-            type_zone = 'assainie' if client.zone in ZONES_ASSAINIES \
-                else 'non_assainie'
-
+            type_zone = 'assainie' if client.zone in ZONES_ASSAINIES else 'non_assainie'
             tarif = Tarif.objects.filter(
                 type_zone=type_zone,
                 type_abonne='domestique_15mm',
@@ -265,9 +295,7 @@ class GenererToutesFacturesView(APIView):
             volume_m3 = volume_litres / 1000
 
             if volume_m3 == 0:
-                erreurs.append(
-                    f'{client.nom_complet} : aucune consommation'
-                )
+                erreurs.append(f'{client.nom_complet} : aucune consommation')
                 continue
 
             facture_existante = Facture.objects.filter(
@@ -276,9 +304,7 @@ class GenererToutesFacturesView(APIView):
             ).first()
 
             if facture_existante:
-                erreurs.append(
-                    f'{client.nom_complet} : facture déjà générée'
-                )
+                erreurs.append(f'{client.nom_complet} : facture déjà générée')
                 continue
 
             montant = calculer_montant(volume_m3, tarif)
@@ -293,12 +319,118 @@ class GenererToutesFacturesView(APIView):
                 periode_debut=debut.date(),
                 periode_fin=fin.date()
             )
-            factures_creees.append(
-                f'{client.nom_complet} : {montant} FCFA'
-            )
+
+          
+
+            factures_creees.append(f'{client.nom_complet} : {montant} FCFA')
 
         return Response({
-            'message': f'{len(factures_creees)} facture(s) générée(s)',
-            'factures_creees': factures_creees,
-            'erreurs': erreurs
-        })
+    'message': f'{len(factures_creees)} facture(s) générée(s)',
+    'factures_creees': factures_creees,
+    'factures_ids': [
+        FactureSerializer(
+            Facture.objects.get(client__nom_complet=f.split(' :')[0]),
+            context={'request': request}
+        ).data
+        for f in factures_creees
+    ],
+    'erreurs': erreurs
+})
+
+class FacturePDFView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request, facture_id):
+        try:
+            facture = Facture.objects.get(id=facture_id)
+            
+            # Vérifier que le client peut accéder à sa facture
+            if request.user.role == 'client' and facture.client != request.user:
+                return Response(
+                    {'erreur': 'Accès refusé'},
+                    status=status.HTTP_403_FORBIDDEN
+                )
+
+            # Sérialiser la facture
+            serializer = FactureSerializer(
+                facture,
+                context={'request': request}
+            )
+            
+            # Retourner les données JSON pour que le frontend génère le PDF
+            return Response(serializer.data)
+
+        except Facture.DoesNotExist:
+            return Response(
+                {'erreur': 'Facture non trouvée'},
+                status=status.HTTP_404_NOT_FOUND
+            )
+
+class EnvoyerPDFView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request, facture_id):
+        try:
+            facture = Facture.objects.get(id=facture_id)
+            pdf_base64 = request.data.get('pdf_base64')
+
+            if not pdf_base64:
+                return Response(
+                    {'erreur': 'PDF manquant'},
+                    status=status.HTTP_400_BAD_REQUEST
+                )
+
+            # Décoder le PDF
+            pdf_bytes = base64.b64decode(pdf_base64)
+
+            # Ouvrir une nouvelle connexion SMTP
+            with mail.get_connection() as connection:
+                email = EmailMessage(
+                    subject=f'Smart Ndiyam - Facture #{facture.id}',
+                    body=f"""
+Bonjour {facture.client.first_name} {facture.client.last_name},
+
+Veuillez trouver ci-joint votre facture #{facture.id}.
+
+Période     : {facture.periode_debut} - {facture.periode_fin}
+Montant     : {facture.montant} FCFA
+Date limite : {facture.date_limite}
+
+Connectez-vous sur l'application Smart Ndiyam pour payer.
+
+Modes de paiement :
+- Wave
+- Orange Money
+- Agence SEN'EAU
+
+Smart Ndiyam - Système Intelligent de Gestion d'Eau IoT
+                    """,
+                    from_email=settings.DEFAULT_FROM_EMAIL,
+                    to=[facture.client.email],
+                    connection=connection,
+                )
+
+                # Attacher le PDF
+                email.attach(
+                    f'Facture_{facture.id}_{facture.client.last_name}.pdf',
+                    pdf_bytes,
+                    'application/pdf'
+                )
+                email.send()
+
+            print(f"PDF envoyé à {facture.client.email}")
+            return Response({
+                'message': f'PDF envoyé à {facture.client.email}'
+            })
+
+        except Facture.DoesNotExist:
+            return Response(
+                {'erreur': 'Facture non trouvée'},
+                status=status.HTTP_404_NOT_FOUND
+            )
+        except Exception as e:
+            print(f"Erreur envoi PDF: {e}")
+            return Response(
+                {'erreur': str(e)},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )

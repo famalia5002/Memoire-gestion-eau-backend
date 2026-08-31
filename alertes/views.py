@@ -32,13 +32,21 @@ class ResoudreAlerteView(APIView):
     def post(self, request, alerte_id):
         try:
             alerte = Alerte.objects.get(id=alerte_id)
+
+            if alerte.statut == 'resolue':
+                return Response(
+                    {'erreur': 'Cette alerte est déjà résolue'},
+                    status=status.HTTP_400_BAD_REQUEST
+                )
+
+            # Juste marquer comme résolue
+            # L'admin gère la vanne manuellement depuis la page Compteurs
             alerte.statut = 'resolue'
             alerte.date_resolution = timezone.now()
             alerte.save()
 
             return Response({
                 'message': 'Alerte résolue avec succès',
-                'alerte_id': alerte_id
             })
 
         except Alerte.DoesNotExist:
@@ -46,7 +54,11 @@ class ResoudreAlerteView(APIView):
                 {'erreur': 'Alerte non trouvée'},
                 status=status.HTTP_404_NOT_FOUND
             )
-
+        except Exception as e:
+            return Response(
+                {'erreur': str(e)},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
 class ListeCommandesView(generics.ListAPIView):
     permission_classes = [IsAuthenticated]
     serializer_class = CommandeSerializer

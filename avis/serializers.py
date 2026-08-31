@@ -15,3 +15,11 @@ class AvisSerializer(serializers.ModelSerializer):
             'note', 'commentaire', 'date_avis',
             'statut', 'reponse_admin', 'date_reponse'  
         ]
+
+        read_only_fields = [  
+            'client',
+            'date_avis',
+            'statut',
+            'reponse_admin',
+            'date_reponse'
+        ]

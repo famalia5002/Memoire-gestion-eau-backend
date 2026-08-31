@@ -5,7 +5,7 @@ from compteurs.models import Compteur
 
 class Alerte(models.Model):
     TYPES = [
-        ('fuite', 'Fuite probable'),
+        ('fuite', 'Fuite '),
         ('surconsommation', 'Surconsommation'),
         ('deconnecte', 'Compteur déconnecté'),
     ]
