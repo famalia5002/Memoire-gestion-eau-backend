@@ -112,6 +112,39 @@ class ControlerVanneView(APIView):
 
             compteur.save()
 
+            #  Publier commande via MQTT pour ESP32
+            try:
+                import paho.mqtt.client as mqtt
+                import json
+                import ssl
+
+                mqtt_client = mqtt.Client(
+                    client_id="django_publisher",
+                    protocol=mqtt.MQTTv5,
+                    callback_api_version=mqtt.CallbackAPIVersion.VERSION2
+                )
+                mqtt_client.tls_set(
+                    cert_reqs=ssl.CERT_REQUIRED,
+                    tls_version=ssl.PROTOCOL_TLS
+                )
+                mqtt_client.username_pw_set('django', 'Django@2026')
+                mqtt_client.connect(
+                    'y8182a1b.ala.eu-central-1.emqxsl.com',
+                    8883, 60
+                )
+
+                payload = json.dumps({
+                    'numero_compteur': compteur.numero_compteur,
+                    'action': action
+                })
+                mqtt_client.publish('smartndiyam/vanne/cmd', payload)
+                mqtt_client.disconnect()
+                print(f" Commande MQTT envoyée : {action} pour {compteur.numero_compteur}")
+
+            except Exception as mqtt_error:
+                print(f" Erreur MQTT (commande vanne): {mqtt_error}")
+                # On continue même si MQTT échoue
+
             return Response({
                 'message': f'Vanne {action}e avec succès',
                 'etat_vanne': compteur.etat_vanne,
@@ -123,7 +156,6 @@ class ControlerVanneView(APIView):
                 {'erreur': 'Compteur non trouvé'},
                 status=status.HTTP_404_NOT_FOUND
             )
-
 
 class DesassocierCompteurView(APIView):
     permission_classes = [IsAuthenticated]
@@ -145,7 +177,7 @@ class DesassocierCompteurView(APIView):
             )
 
 
-#  Client peut fermer sa vanne d'urgence
+# Client peut fermer sa vanne d'urgence
 class FermerVanneClientView(APIView):
     permission_classes = [IsAuthenticated]
 
@@ -185,6 +217,38 @@ class FermerVanneClientView(APIView):
                 statut='envoyee'
             )
 
+            #  Publier commande via MQTT pour ESP32
+            try:
+                import paho.mqtt.client as mqtt
+                import json
+                import ssl
+
+                mqtt_client = mqtt.Client(
+                    client_id="django_publisher_client",
+                    protocol=mqtt.MQTTv5,
+                    callback_api_version=mqtt.CallbackAPIVersion.VERSION2
+                )
+                mqtt_client.tls_set(
+                    cert_reqs=ssl.CERT_REQUIRED,
+                    tls_version=ssl.PROTOCOL_TLS
+                )
+                mqtt_client.username_pw_set('django', 'Django@2026')
+                mqtt_client.connect(
+                    'y8182a1b.ala.eu-central-1.emqxsl.com',
+                    8883, 60
+                )
+                payload = json.dumps({
+                    'numero_compteur': compteur.numero_compteur,
+                    'action': 'fermer'
+                })
+                mqtt_client.publish('smartndiyam/vanne/cmd', payload)
+                mqtt_client.disconnect()
+                print(f" Commande MQTT fermeture urgence envoyée pour {compteur.numero_compteur}")
+
+            except Exception as mqtt_error:
+                print(f" Erreur MQTT: {mqtt_error}")
+                # On continue même si MQTT échoue
+
             return Response({
                 'message': 'Vanne fermée avec succès. L\'administrateur a été notifié.',
                 'etat_vanne': 'fermee',
@@ -212,7 +276,7 @@ class RouvrirVanneClientView(APIView):
                 client=request.user
             )
 
-            # ← Client ne peut rouvrir que si c'est lui qui a fermé
+            # Client ne peut rouvrir que si c'est lui qui a fermé
             if compteur.ferme_par == 'admin':
                 return Response(
                     {'erreur': 'Seul l\'administrateur peut rouvrir cette vanne.'},
@@ -228,6 +292,38 @@ class RouvrirVanneClientView(APIView):
             compteur.etat_vanne = 'ouverte'
             compteur.ferme_par = None
             compteur.save()
+
+            # Publier commande via MQTT pour ESP32
+            try:
+                import paho.mqtt.client as mqtt
+                import json
+                import ssl
+
+                mqtt_client = mqtt.Client(
+                    client_id="django_publisher_rouvrir",
+                    protocol=mqtt.MQTTv5,
+                    callback_api_version=mqtt.CallbackAPIVersion.VERSION2
+                )
+                mqtt_client.tls_set(
+                    cert_reqs=ssl.CERT_REQUIRED,
+                    tls_version=ssl.PROTOCOL_TLS
+                )
+                mqtt_client.username_pw_set('django', 'Django@2026')
+                mqtt_client.connect(
+                    'y8182a1b.ala.eu-central-1.emqxsl.com',
+                    8883, 60
+                )
+                payload = json.dumps({
+                    'numero_compteur': compteur.numero_compteur,
+                    'action': 'ouvrir'
+                })
+                mqtt_client.publish('smartndiyam/vanne/cmd', payload)
+                mqtt_client.disconnect()
+                print(f" Commande MQTT réouverture envoyée pour {compteur.numero_compteur}")
+
+            except Exception as mqtt_error:
+                print(f" Erreur MQTT: {mqtt_error}")
+                # On continue même si MQTT échoue
 
             return Response({
                 'message': 'Vanne rouverte avec succès.',
