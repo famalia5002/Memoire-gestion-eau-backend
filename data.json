@@ -1296,6 +1296,14 @@
 },
 {
   "model": "sessions.session",
+  "pk": "9f1h5ycbdtdse0sbnunhw6s48sois0zs",
+  "fields": {
+    "session_data": ".eJxVjEEOgjAQRe_StWkYBkrr0j1nIDPT1qKmTSisjHcXEha6fe_9_1YTbWuathqWafbqqkBdfhmTPEM-hH9QvhctJa_LzPpI9GmrHosPr9vZ_h0kqmlfIwMDMPsO2VrpIhgTGxRwyD2gmEFaR2IJGaEfKELbOCs7NL0xxOrzBd0MN4w:1x8J6a:BXQh-X5S4OuLINvtBMcMqy3gSCehh5Nz30IPiU0xAfM",
+    "expire_date": "2026-10-04T15:05:24.372Z"
+  }
+},
+{
+  "model": "sessions.session",
   "pk": "drj6hmtcl917k84z20lds78fdpx9cj0j",
   "fields": {
     "session_data": ".eJxVjEEOgjAQRe_StWkYBkrr0j1nIDPT1qKmTSisjHcXEha6fe_9_1YTbWuathqWafbqqkBdfhmTPEM-hH9QvhctJa_LzPpI9GmrHosPr9vZ_h0kqmlfIwMDMPsO2VrpIhgTGxRwyD2gmEFaR2IJGaEfKELbOCs7NL0xxOrzBd0MN4w:1wqGPj:dNuEGjob87j5XtFgNQhui6ORxkt90fp1uMYvnJ_1PEE",
@@ -1307,7 +1315,7 @@
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$600000$Lzo5LBUP8UX0MHUUlgXc3a$Yvo3f2zbl+ffJpm7+Qdg2ZL9qSKo5NTh1xguq/HICFw=",
-    "last_login": "2026-08-22T05:18:00Z",
+    "last_login": "2026-09-20T15:05:24.356Z",
     "is_superuser": true,
     "username": "famalia",
     "first_name": "Fatimata",
@@ -1650,10 +1658,10 @@
     "numero_compteur": "C001",
     "serie": "SN-001-2025",
     "statut": "attribue",
-    "etat_vanne": "ouverte",
+    "etat_vanne": "fermee",
     "client": 2,
     "date_installation": "2026-07-22T00:56:05.459Z",
-    "ferme_par": null
+    "ferme_par": "admin"
   }
 },
 {
@@ -1697,24 +1705,6 @@
 },
 {
   "model": "consommation.consommation",
-  "pk": 1,
-  "fields": {
-    "compteur": 1,
-    "volume": 25.5,
-    "date_heure": "2026-07-22T01:09:02.759Z"
-  }
-},
-{
-  "model": "consommation.consommation",
-  "pk": 3,
-  "fields": {
-    "compteur": 1,
-    "volume": 150.0,
-    "date_heure": "2026-08-04T20:32:03.893Z"
-  }
-},
-{
-  "model": "consommation.consommation",
   "pk": 5,
   "fields": {
     "compteur": 3,
@@ -1732,30 +1722,93 @@
   }
 },
 {
-  "model": "consommation.index",
-  "pk": 1,
+  "model": "consommation.consommation",
+  "pk": 18,
   "fields": {
     "compteur": 1,
-    "valeur_index": 0.0255,
-    "date_releve": "2026-07-22T01:09:02.777Z"
+    "volume": 25.5,
+    "date_heure": "2026-09-06T06:49:33.981Z"
   }
 },
 {
-  "model": "consommation.index",
-  "pk": 2,
+  "model": "consommation.consommation",
+  "pk": 19,
   "fields": {
     "compteur": 1,
-    "valeur_index": 0.051,
-    "date_releve": "2026-07-22T01:10:15.799Z"
+    "volume": 25.0,
+    "date_heure": "2026-09-06T06:51:11.861Z"
   }
 },
 {
-  "model": "consommation.index",
-  "pk": 3,
+  "model": "consommation.consommation",
+  "pk": 20,
   "fields": {
     "compteur": 1,
-    "valeur_index": 0.20099999999999998,
-    "date_releve": "2026-08-04T20:32:03.937Z"
+    "volume": 0.0111,
+    "date_heure": "2026-09-11T09:31:49.397Z"
+  }
+},
+{
+  "model": "consommation.consommation",
+  "pk": 21,
+  "fields": {
+    "compteur": 1,
+    "volume": 0.0111,
+    "date_heure": "2026-09-11T09:32:06.046Z"
+  }
+},
+{
+  "model": "consommation.consommation",
+  "pk": 22,
+  "fields": {
+    "compteur": 1,
+    "volume": 0.02442,
+    "date_heure": "2026-09-11T09:32:08.025Z"
+  }
+},
+{
+  "model": "consommation.consommation",
+  "pk": 23,
+  "fields": {
+    "compteur": 1,
+    "volume": 0.01332,
+    "date_heure": "2026-09-11T09:32:09.059Z"
+  }
+},
+{
+  "model": "consommation.consommation",
+  "pk": 24,
+  "fields": {
+    "compteur": 1,
+    "volume": 0.25974,
+    "date_heure": "2026-09-11T09:32:17.154Z"
+  }
+},
+{
+  "model": "consommation.consommation",
+  "pk": 25,
+  "fields": {
+    "compteur": 1,
+    "volume": 0.01554,
+    "date_heure": "2026-09-11T09:32:29.140Z"
+  }
+},
+{
+  "model": "consommation.consommation",
+  "pk": 26,
+  "fields": {
+    "compteur": 1,
+    "volume": 0.01776,
+    "date_heure": "2026-09-11T09:32:31.083Z"
+  }
+},
+{
+  "model": "consommation.consommation",
+  "pk": 27,
+  "fields": {
+    "compteur": 1,
+    "volume": 0.934621,
+    "date_heure": "2026-09-11T09:34:04.156Z"
   }
 },
 {
@@ -1765,6 +1818,96 @@
     "compteur": 2,
     "valeur_index": 0.15,
     "date_releve": "2026-08-25T06:14:29.513Z"
+  }
+},
+{
+  "model": "consommation.index",
+  "pk": 16,
+  "fields": {
+    "compteur": 1,
+    "valeur_index": 0.0255,
+    "date_releve": "2026-09-06T06:49:34.006Z"
+  }
+},
+{
+  "model": "consommation.index",
+  "pk": 17,
+  "fields": {
+    "compteur": 1,
+    "valeur_index": 0.0505,
+    "date_releve": "2026-09-06T06:51:11.888Z"
+  }
+},
+{
+  "model": "consommation.index",
+  "pk": 18,
+  "fields": {
+    "compteur": 1,
+    "valeur_index": 0.0505,
+    "date_releve": "2026-09-11T09:31:49.444Z"
+  }
+},
+{
+  "model": "consommation.index",
+  "pk": 19,
+  "fields": {
+    "compteur": 1,
+    "valeur_index": 0.0505,
+    "date_releve": "2026-09-11T09:32:06.077Z"
+  }
+},
+{
+  "model": "consommation.index",
+  "pk": 20,
+  "fields": {
+    "compteur": 1,
+    "valeur_index": 0.0505,
+    "date_releve": "2026-09-11T09:32:08.054Z"
+  }
+},
+{
+  "model": "consommation.index",
+  "pk": 21,
+  "fields": {
+    "compteur": 1,
+    "valeur_index": 0.0505,
+    "date_releve": "2026-09-11T09:32:09.074Z"
+  }
+},
+{
+  "model": "consommation.index",
+  "pk": 22,
+  "fields": {
+    "compteur": 1,
+    "valeur_index": 0.0508,
+    "date_releve": "2026-09-11T09:32:17.187Z"
+  }
+},
+{
+  "model": "consommation.index",
+  "pk": 23,
+  "fields": {
+    "compteur": 1,
+    "valeur_index": 0.0508,
+    "date_releve": "2026-09-11T09:32:29.172Z"
+  }
+},
+{
+  "model": "consommation.index",
+  "pk": 24,
+  "fields": {
+    "compteur": 1,
+    "valeur_index": 0.0508,
+    "date_releve": "2026-09-11T09:32:31.101Z"
+  }
+},
+{
+  "model": "consommation.index",
+  "pk": 25,
+  "fields": {
+    "compteur": 1,
+    "valeur_index": 0.0517,
+    "date_releve": "2026-09-11T09:34:04.161Z"
   }
 },
 {
@@ -1888,6 +2031,28 @@
     "statut": "resolue",
     "date": "2026-08-29T00:54:18.201Z",
     "date_resolution": "2026-08-29T00:55:27.393Z"
+  }
+},
+{
+  "model": "alertes.alerte",
+  "pk": 27,
+  "fields": {
+    "compteur": 1,
+    "type_alerte": "fuite",
+    "statut": "en_cours",
+    "date": "2026-09-06T06:28:01.895Z",
+    "date_resolution": null
+  }
+},
+{
+  "model": "alertes.alerte",
+  "pk": 28,
+  "fields": {
+    "compteur": 1,
+    "type_alerte": "surconsommation",
+    "statut": "en_cours",
+    "date": "2026-09-11T09:32:06.140Z",
+    "date_resolution": null
   }
 },
 {
@@ -2100,6 +2265,39 @@
   }
 },
 {
+  "model": "alertes.commande",
+  "pk": 20,
+  "fields": {
+    "compteur": 1,
+    "action": "fermer",
+    "statut": "envoyee",
+    "effectuee_par": 1,
+    "date_commande": "2026-09-07T00:34:39.530Z"
+  }
+},
+{
+  "model": "alertes.commande",
+  "pk": 21,
+  "fields": {
+    "compteur": 1,
+    "action": "ouvrir",
+    "statut": "envoyee",
+    "effectuee_par": 1,
+    "date_commande": "2026-09-07T00:48:30.053Z"
+  }
+},
+{
+  "model": "alertes.commande",
+  "pk": 22,
+  "fields": {
+    "compteur": 1,
+    "action": "fermer",
+    "statut": "envoyee",
+    "effectuee_par": 1,
+    "date_commande": "2026-09-07T00:48:41.488Z"
+  }
+},
+{
   "model": "avis.avis",
   "pk": 1,
   "fields": {
@@ -2123,19 +2321,6 @@
     "statut": "traite",
     "reponse_admin": "m",
     "date_reponse": "2026-08-27T06:09:58.804Z"
-  }
-},
-{
-  "model": "avis.avis",
-  "pk": 3,
-  "fields": {
-    "client": 2,
-    "note": 4,
-    "commentaire": "Bien",
-    "date_avis": "2026-08-26T22:44:39.712Z",
-    "statut": "traite",
-    "reponse_admin": "merci amina",
-    "date_reponse": "2026-08-26T22:45:30.392Z"
   }
 },
 {
