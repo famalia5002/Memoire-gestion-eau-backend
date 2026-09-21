@@ -13,5 +13,6 @@ class CompteurSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'numero_compteur', 'serie', 
             'statut', 'etat_vanne','ferme_par', 'client',
-            'client_detail', 'date_installation'
+            'client_detail', 'date_installation',
+            'latitude', 'longitude',
         ]

@@ -41,6 +41,8 @@ class Compteur(models.Model):
         null=True,
         blank=True
     )
+    latitude = models.FloatField(null=True, blank=True)
+    longitude = models.FloatField(null=True, blank=True)
 
     def __str__(self):
         return f"Compteur {self.numero_compteur}"

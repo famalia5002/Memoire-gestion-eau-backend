@@ -49,8 +49,14 @@ class AssocierCompteurClientView(APIView):
 
             compteur.client = client
             compteur.statut = 'attribue'
+
+            # ← Copier les coordonnées GPS du client
+            compteur.latitude = client.latitude
+            compteur.longitude = client.longitude
+
             compteur.save()
 
+            # Passer le client à "actif" automatiquement
             if client.statut_abonnement == 'en_traitement':
                 client.statut_abonnement = 'actif'
                 client.save()
