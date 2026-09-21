@@ -1542,7 +1542,7 @@
     "date_joined": "2026-08-02T19:36:20.110Z",
     "role": "admin_zone",
     "zone": "Diourbel",
-    "telephone": "77905432",
+    "telephone": "779054320",
     "adresse": null,
     "latitude": null,
     "longitude": null,
@@ -1637,11 +1637,11 @@
     "zone": "Rufisque",
     "telephone": "775842369",
     "adresse": "Rufisque est",
-    "latitude": null,
-    "longitude": null,
+    "latitude": 14.717652,
+    "longitude": -17.255099,
     "photo": "",
     "type_client": "proprietaire",
-    "statut_abonnement": "en_traitement",
+    "statut_abonnement": "actif",
     "doc_cin": true,
     "doc_attestation": false,
     "doc_contrat_location": false,
@@ -1661,7 +1661,9 @@
     "etat_vanne": "fermee",
     "client": 2,
     "date_installation": "2026-07-22T00:56:05.459Z",
-    "ferme_par": "admin"
+    "ferme_par": "admin",
+    "latitude": 14.6968,
+    "longitude": -17.4427
   }
 },
 {
@@ -1674,7 +1676,9 @@
     "etat_vanne": "ouverte",
     "client": 3,
     "date_installation": "2026-08-02T01:37:32.020Z",
-    "ferme_par": null
+    "ferme_par": null,
+    "latitude": 14.6928,
+    "longitude": -17.4467
   }
 },
 {
@@ -1687,7 +1691,9 @@
     "etat_vanne": "ouverte",
     "client": 14,
     "date_installation": "2026-08-02T02:32:16.808Z",
-    "ferme_par": null
+    "ferme_par": null,
+    "latitude": 14.6948,
+    "longitude": -17.4447
   }
 },
 {
@@ -1696,11 +1702,13 @@
   "fields": {
     "numero_compteur": "C004",
     "serie": "Sn-2025-007",
-    "statut": "disponible",
+    "statut": "attribue",
     "etat_vanne": "ouverte",
-    "client": null,
+    "client": 16,
     "date_installation": "2026-08-02T02:37:38.785Z",
-    "ferme_par": null
+    "ferme_par": null,
+    "latitude": 14.717652,
+    "longitude": -17.255099
   }
 },
 {
